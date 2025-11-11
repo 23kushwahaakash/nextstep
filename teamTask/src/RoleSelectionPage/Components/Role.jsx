@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 
-function Role({tagline1,tagline2,button}) {
+function Role({tagline1,tagline2,button,navigateTo}) {
     const navigate = useNavigate(); 
   return (
     <div className='bg-[#F1F5FA] rounded-2xl md:w-[85%] flex flex-col justify-center items-center mx-10 mb-20 shadow-xl'>
@@ -10,7 +10,7 @@ function Role({tagline1,tagline2,button}) {
             <h1 className="mb-5">{tagline2}</h1>
             <button 
                type="submit" 
-               onClick={() => navigate('')}
+               onClick={() => navigate(navigateTo)}
                className="relative overflow-hidden bg-[#15294B] px-25 py-5 mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
             >
             <span className="relative z-10">{button}</span>

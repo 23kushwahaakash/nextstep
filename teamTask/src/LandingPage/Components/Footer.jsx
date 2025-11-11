@@ -1,7 +1,7 @@
 import NextStep from "../Images/NextStep.png"
-import Facebook from "../Authorisation/Images/facebook.png"
-import Apple from "../Authorisation/Images/apple.png"
-import Google from "../Authorisation/Images/google.png"
+import Facebook from "../Images/facebook.png"
+import Apple from "../Images/apple.png"
+import Google from "../Images/google.png"
 
 
 function Footer() {

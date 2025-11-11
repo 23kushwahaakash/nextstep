@@ -6,8 +6,8 @@ import ForgotPage from "./Authorisation/Pages/ForgotPage"
 import VerifyPage from "./Authorisation/Pages/VerifyPage"
 import CreateNewPasswordPage from "./Authorisation/Pages/CreateNewPasswordPage"
 import UpdatedPasswordPage from "./Authorisation/Pages/UpdatedPasswordPage"
-import RoleSelectionPage from "./Pages/RoleSelectionPage"
-import JSLandingPage from "./Pages/JSLandingPage"
+import JSLandingPage from "./LandingPage/Pages/JSLandingPage"
+import RoleSelectionPage from "./RoleSelectionPage/Pages/RoleSelectionPage"
 
 
 function App() {
