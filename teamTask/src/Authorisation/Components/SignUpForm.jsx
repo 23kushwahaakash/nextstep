@@ -127,7 +127,7 @@ function SignUpForm() {
           <button 
            type="submit" 
            onClick={signUp}
-           className="relative overflow-hidden bg-[#15294B] px-30 py-5 mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
+           className="relative overflow-hidden bg-[#15294B] px-[25%] py-5 mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
           >
           <span className="relative z-10">Sign Up</span>
           <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
