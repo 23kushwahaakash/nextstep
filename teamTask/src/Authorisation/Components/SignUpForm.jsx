@@ -54,7 +54,7 @@ function SignUpForm() {
                 }
             );
             console.log("Signup Successful:", response.data);
-            navigate('/forgotpassword/verifyotp')
+            navigate('/forgotpassword/verifyotp', { state: { email: email } });
         } catch (error) {
             console.error("Signup Failed:", error.response ? error.response.data : error.message);
             alert("Signup Failed! " + (error.response?.data?.message || error.message));
