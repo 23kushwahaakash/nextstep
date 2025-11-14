@@ -1,9 +1,16 @@
+import { useState } from "react"; 
+import { useNavigate } from "react-router-dom";
 import NextStep from "../Images/NextStep.png";
 import Humburger from "../Components/Humburger";
 import SmallerTabs from "../Components/SmallerTabs";
+import ProfilePopUp from "../Components/ProfilePopUp"
 import { Search, Mic, Home, MessageCircle, Briefcase, Bell, User, ChevronDown } from "lucide-react";
 
 function Header() {
+  const [isProfileOpen, setIsProfileOpen] = useState(false); 
+
+  const navigate = useNavigate();
+
   return (
     <div className="w-full fixed top-0 left-0 z-50 bg-[#F5F8FD] py-3 px-6 flex items-center justify-between">
 
@@ -28,9 +35,9 @@ function Header() {
       </div>
 
       <div className="flex items-center gap-3 hidden md:flex">
-         <button><SmallerTabs icon={Home} title="Home" /></button>
-        <button><SmallerTabs icon={MessageCircle} title="Chats" badge="7" /></button>
-        <button><SmallerTabs icon={Briefcase} title="Jobs" /></button>
+         <button onClick={()=>navigate("/home")} ><SmallerTabs icon={Home} title="Home" /></button>
+        <button onClick={()=>navigate("/chats")} ><SmallerTabs icon={MessageCircle} title="Chats" badge="7" /></button>
+        <button onClick={()=>navigate("/jobs")}><SmallerTabs icon={Briefcase} title="Jobs" /></button>
       </div>
 
         <div className="flex items-center gap-5">
@@ -47,9 +54,20 @@ function Header() {
             </select>
           </div>
           
-          <div className="bg-[#0A2A5E] p-2 rounded-full cursor-pointer">
-            <User className="text-white w-6 h-6" />
+          
+          <div className="relative">
+            <button 
+              className="bg-[#0A2A5E] p-2 rounded-full cursor-pointer" 
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <User className="text-white w-6 h-6" />
+            </button>
+            
+            {isProfileOpen && (
+              <ProfilePopUp onClose={() => setIsProfileOpen(false)} />
+            )}
           </div>
+          
         </div>
 
     </div>

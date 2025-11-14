@@ -1,12 +1,12 @@
 import HeroImage from "../Images/HeroImage.png"
 import { Briefcase, Users, Building} from "lucide-react"
 
-function HeroSection({Title,subTitle1,HeroSectionButton,icon1,icon2,icon3}) {
+function HeroSection({Title,subTitle1,HeroSectionButton}) {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat" 
+    <div className="min-h-screen  bg-cover bg-center bg-no-repeat" 
     style={{ backgroundImage: `url(${HeroImage})` }}>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="flex relative z-10 flex-col items-center justify-center min-h-screen">
+        <div className="flex relative z-10 flex-col items-center w-full justify-center min-h-screen">
             <h1 className="text-white text-6xl font-serif font-bold text-center px-4 drop-shadow-lg">{Title}</h1>
             <h1 className="font-serif mt-5 drop-shadow-lg text-2xl text-white">{subTitle1}</h1>
             {HeroSectionButton}
