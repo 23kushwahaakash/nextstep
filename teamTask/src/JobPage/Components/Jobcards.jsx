@@ -9,13 +9,13 @@ function Jobcards({time,logo,title,position,duration,salary,location}) {
     <div className='shadow-lg rounded-lg grid grid-rows-3 p-2 md:p-5 gap-2 md:mb-5'>
 
       <div className="flex justify-between items-center">
-        <h1 className="bg-gray-300 rounded-md px-1 font-serif text-gray-500 text-xs">{time}</h1>
+        <h1 className="bg-gray-300 rounded-md px-1 font-serif text-gray-500 md:text-xs">{time}</h1>
         <img src={Save} alt="save" className="h-5 w-5"/>
       </div>
 
       <div className="flex gap-1 md:gap-2 items-center">
         <img src={logo} alt="logo" />
-        <h1 className="font-serif text-xl">{title}</h1>
+        <h1 className="font-serif md:text-xl">{title}</h1>
       </div>
 
       <div className="flex">
@@ -37,7 +37,7 @@ function Jobcards({time,logo,title,position,duration,salary,location}) {
           <h1 className="text-xs text-gray-500">{location}</h1>
          </div>
         </div>
-        <button className="bg-[#15294B] text-white md:text-xs mx-auto px-5 md:px-5 rounded-lg whitespace-nowrap">Job Details</button>
+        <button className="bg-[#15294B] text-white md:text-xs mx-auto px-5md:px-5 rounded-lg whitespace-nowrap">Job Details</button>
       </div>
 
             
