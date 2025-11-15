@@ -36,10 +36,10 @@ function JobPage() {
         <div className="md:p-5">
             <h1 className="font-serif text-xl p-5 md:pt-5 md:text-4xl">Recent Jobs Available</h1>
 
-            <div className="grid grid-cols-2 gap-2 px-5">
-                <div className="bg-[#F1F5FA] rounded-lg p-2 mb-5 shadow-lg">
+            <div className="grid grid-cols-2 md:grid-cols-[25%_75%]  gap-2 px-5">
+                <div className="bg-[#F1F5FA] rounded-lg p-2 mb-5">
                     <h1 className="text-lg font-semibold mb-3">Search by Job Title</h1>
-                    <div className="bg-white  gap-2 mb-5">
+                    <div className="bg-white md:flex md:py-2 md:rounded-md gap-2 mb-5">
                         <Search stroke="gray" className="w-4"/>
                         <input type="text" placeholder="Job title or company" className=" placeholder:text-sm" />
                     </div>
@@ -52,35 +52,35 @@ function JobPage() {
                     </select>
 
                     <h1 className="text-lg font-semibold mb-3 mt-5">Category</h1>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Commerce</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Telecom</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Hotels & Tourism</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Education</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Financial Services</h1>
@@ -91,35 +91,35 @@ function JobPage() {
                     <button className="text-white bg-[#15294B] w-full my-2 rounded-lg">Show More</button>
 
                     <h1 className="text-lg font-semibold mb-3 mt-5">Job Type</h1>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Full Time</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Part Time</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Free Lance</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Seasonal</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Fixed Price</h1>
@@ -128,28 +128,28 @@ function JobPage() {
                     </div>
 
                     <h1 className="text-lg font-semibold mb-3 mt-5">Experience Level</h1>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>No-experience</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Fresher</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Intermediate</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Expert</h1>
@@ -159,35 +159,35 @@ function JobPage() {
                     
 
                     <h1 className="text-lg font-semibold mb-3 mt-5">Date Posted</h1>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>All</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Last Hour</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Last 24 Hours</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Last 7 Days</h1>
                         </div>
                         <span className="bg-white p-1 rounded-full">0</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-1">
                         <div className="flex items-center gap-1">
                             <input type="checkbox"/>
                             <h1>Last 30 Days</h1>
@@ -203,9 +203,9 @@ function JobPage() {
                     value={value}
                     onChange={(e)=>setValue(e.target.value)} />
 
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center md:justify-between gap-5">
                         <h1 className="text-xl font-semibold">${value}</h1>
-                        <button className="text-white bg-[#15294B] w-full my-2 rounded-lg">Apply</button>
+                        <button className="text-white bg-[#15294B] w-full md:w-50 my-2 rounded-lg">Apply</button>
                     </div>
 
                     <h1 className="text-lg font-semibold mb-3 mt-5">Tags</h1>
@@ -274,7 +274,7 @@ function JobPage() {
                     location="Lucknow"/>
                 </div>
 
-                <div className="relative shadow-lg mb-5">
+                <div className="relative shadow-lg mb-5 md:w-80">
                         <img src={MostSearchedJob} alt="people" className="w-full h-80" />
                         <div className="absolute inset-0 p-2 flex flex-col">
                             <h2 className="text-white bg-[#15294B] text-center py-1  rounded-md font-semibold mb-3 ">Most Searched Jobs:</h2>
@@ -311,32 +311,32 @@ function JobPage() {
                     </div>
                 </div>
             </div>
-            <div className="p-4">
-                <h1 className="font-serif text-2xl">Get hired by top companies</h1>
-                <div className="grid grid-cols-4 grid-rows-2 gap-5 mt-5">
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I1} alt="I1" className="p-2" />
+            <div className="md:flex md:flex-col md:justify-center md:items-center p-8 md:mx-auto">
+                <h1 className="font-serif text-2xl md:text-4xl md:text-center md:mb-15">Get hired by top companies</h1>
+                <div className="grid grid-cols-4 grid-rows-2 gap-5 mt-5 md:w-[50%]">
+                    <div className="  shadow-lg rounded-lg md:py-5">
+                        <img src={I1} alt="I1" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I2} alt="I2" className="p-2" />
+                    <div className="shadow-lg rounded-lg  md:py-5">
+                        <img src={I2} alt="I2" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I3} alt="I3" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I3} alt="I3" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I4} alt="I4" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I4} alt="I4" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I5} alt="I5" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I5} alt="I5" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I6} alt="I6" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I6} alt="I6" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I7} alt="I7" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I7} alt="I7" className="p-2 md:h-20 md:mx-auto" />
                     </div>
-                    <div className="shadow-lg rounded-lg">
-                        <img src={I8} alt="I8" className="p-2" />
+                    <div className="shadow-lg rounded-lg md:py-5">
+                        <img src={I8} alt="I8" className="p-2 md:h-20 md:mx-auto" />
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ function Jobcards({time,logo,title,position,duration,salary,location}) {
       </div>
 
       <div className="flex gap-1 md:gap-2 items-center">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="h" />
         <h1 className="font-serif md:text-xl">{title}</h1>
       </div>
 
