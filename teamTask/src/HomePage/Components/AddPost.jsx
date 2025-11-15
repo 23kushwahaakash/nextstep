@@ -5,8 +5,9 @@ import WriteArticle from "../Images/WriteArticle.png"
 
 function AddPost() {
   return (
-    <div className="shadow-xl grid grid-rows-2  border border-gray-300 rounded-md">
-      <div className="flex gap-2 items-center px-3 pt-2">
+    <div className="border-b border-black px-5 md:px-[15%]">
+      <div className="shadow-xl grid grid-rows-2 mt-5 mb-8 border border-gray-300 rounded-md">
+      <div className="flex gap-2 items-center px-5 pt-2">
         <img src={User} alt="profile" className="h-5 md:h-full" />
         <input type="text" placeholder="Start a post..." className="border border-black rounded-md placeholder:text-center md:py-2 md:px-30" />
       </div>
@@ -24,6 +25,7 @@ function AddPost() {
             <p className="text-xs md:text-xl">Write Article</p>
         </div>
       </div>
+    </div>
     </div>
   )
 }
