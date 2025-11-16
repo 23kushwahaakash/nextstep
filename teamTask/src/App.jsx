@@ -11,6 +11,7 @@ import RoleSelectionPage from "./RoleSelectionPage/Pages/RoleSelectionPage"
 import HomePage from "./HomePage/Pages/HomePage"
 import JobPage from "./JobPage/Pages/JobPage"
 import ProfilePage from "./ProfilePage/Pages/ProfilePage"
+import About from "./AboutPage/Pages/About"
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/jobseeker/home" element={<HomePage/>}></Route>
         <Route path="/jobseeker/jobs" element={<JobPage/>}></Route>
         <Route path="jobseeker/profile" element={<ProfilePage/>}></Route>
+        <Route Path="/about" element={<About/>}></Route>
       </Routes>
     </div>
   )
