@@ -1,4 +1,4 @@
-import checkMark from "../Images/checkMark.png"
+import checkMark from "../Images/checkmark.png"
 import { useNavigate } from "react-router-dom";
 
 function UpdatedPasswordForm() {
