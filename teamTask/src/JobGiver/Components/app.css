@@ -249,3 +249,51 @@ textarea:focus {
     gap: 1rem;
   }
 }
+
+
+:root {
+  --primary-blue: #0066ff;
+  --dark-text: #1a202c;
+ 
+  --header-height: 70px;
+}
+
+
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-light-gray); 
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem; 
+  
+  padding: calc(var(--header-height) + 1.5rem) 2.5%; 
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-item { width: 100%; }
+.span-col-4 { grid-column: span 4; }
+.span-col-5 { grid-column: span 5; }
+.span-col-6 { grid-column: span 6; }
+.span-col-7 { grid-column: span 7; }
+.span-col-8 { grid-column: span 8; }
+.span-col-12 { grid-column: span 12; }
+
+@media (max-width: 1200px) {
+  .span-col-8, .span-col-4, .span-col-7, .span-col-5 {
+    grid-column: span 12;
+  }
+}
+@media (max-width: 992px) {
+  .span-col-6 {
+    grid-column: span 12;
+  }
+}

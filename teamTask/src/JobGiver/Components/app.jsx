@@ -2,18 +2,18 @@
 import React from 'react';
 import './app.css'; 
 
-import Header from './Components/header';
-import WelcomeBanner from './Components/welcomebanner';
-import CompanyCard from './Components/companycard';
-import AlertsSection from './Components/alertsection';
-import AnalyticsOverview from './Components/analytics';
-import JobPostingsTable from './Components/jobposting';
-import CompanyProfile from './Components/companyprofile';
-import ApplicantPipeline from './Components/applicantP\pipeline';
-import ApplicantTrends from './Components/applicanttrends';
-import TopJobsByApplicants from './Components/topjobs';
-import SavedTalentPool from './Components/savedtalentpool';
-import Footer from './Components/footer';
+import Header from './header';
+import WelcomeBanner from './welcomebanner';
+import CompanyCard from './companycard';
+import AlertsSection from './alertsection';
+import AnalyticsOverview from './analytics';
+import JobPostingsTable from './jobposting';
+import CompanyProfile from './companyprofile';
+import ApplicantPipeline from './applicantpipeline';
+import ApplicantTrends from './applicanttrends';
+import TopJobsByApplicants from './topjobs';
+import SavedTalentPool from './savedtalentpool';
+import Footer from './footer';
 
 function app() {
   

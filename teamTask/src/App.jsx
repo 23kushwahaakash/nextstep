@@ -8,7 +8,7 @@ import CreateNewPasswordPage from "./Authorisation/Pages/CreateNewPasswordPage"
 import UpdatedPasswordPage from "./Authorisation/Pages/UpdatedPasswordPage"
 import JSLandingPage from "./LandingPage/Pages/JSLandingPage"
 import RoleSelectionPage from "./RoleSelectionPage/Pages/RoleSelectionPage"
-
+import JobGiver from "./JobGiver/Components/app.jsx"
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/forgotpassword/verifyotp/createnew/updated" element={<UpdatedPasswordPage/>}></Route>
         <Route path="/signup/roleselection" element={<RoleSelectionPage/>}></Route>
         <Route path="/jobseeker" element={<JSLandingPage/>}></Route>
-        
+        <Route path="/jobgiver/" element={<JobGiver/>}></Route>
       </Routes>
     </div>
   )
