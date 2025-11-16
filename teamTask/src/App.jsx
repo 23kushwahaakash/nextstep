@@ -13,6 +13,7 @@ import JobPage from "./JobPage/Pages/JobPage"
 import ProfilePage from "./ProfilePage/Pages/ProfilePage"
 import About from "./AboutPage/About"
 import SubmitPage from "./SubmitPage/SubmitPage"
+import DashboardPage from "./Dashboard/DashboardPage"
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="jobseeker/profile" element={<ProfilePage/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/jobseeker/profile/submit" element={<SubmitPage/>}></Route>
+        <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
       </Routes>
     </div>
   )

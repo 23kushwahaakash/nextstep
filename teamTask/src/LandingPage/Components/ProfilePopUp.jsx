@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { User, Settings, LogOut, UserCircle, Mail } from "lucide-react";
+import { User, Settings, LogOut, UserCircle, Mail,LayoutDashboard} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function ProfilePopUp({ onClose }) {
@@ -41,6 +41,11 @@ function ProfilePopUp({ onClose }) {
         <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobseeker/profile")}>
           <UserCircle className="w-5 h-5" />
           <span>View Profile</span>
+        </button>
+
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobseeker/dashboard")}>
+          <LayoutDashboard className="w-5 h-5" />
+          <span>Dashboard</span>
         </button>
         
         <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/chats")}>

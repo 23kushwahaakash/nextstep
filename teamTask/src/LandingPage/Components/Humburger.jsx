@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home, MessageCircle, Briefcase, X ,User} from "lucide-react";
+import { Home, MessageCircle, Briefcase, X ,User,LayoutDashboard} from "lucide-react";
 
 function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ function Hamburger() {
       {isOpen && (
         <div 
           onClick={closeMenu}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-gray  z-40 md:hidden"
         ></div>
       )}
 
@@ -47,6 +47,15 @@ function Hamburger() {
           >
             <User className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Profile</span>
+          </a>
+
+          <a 
+            href="/jobseeker/dashboard" 
+            onClick={closeMenu}
+            className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
+          >
+            <LayoutDashboard className="w-5 h-5 text-gray-700" />
+            <span className="text-gray-700 font-medium">Dashboard</span>
           </a>
 
           <a 
