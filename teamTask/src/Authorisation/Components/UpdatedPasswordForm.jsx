@@ -6,7 +6,7 @@ function UpdatedPasswordForm() {
 
     const handleResetPassword = (e) => {
         e.preventDefault();
-        navigate("/");
+        navigate("/login");
     }
 
   return (

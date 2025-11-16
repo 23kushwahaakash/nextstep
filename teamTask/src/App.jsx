@@ -14,13 +14,15 @@ import ProfilePage from "./ProfilePage/Pages/ProfilePage"
 import About from "./AboutPage/About"
 import SubmitPage from "./SubmitPage/SubmitPage"
 import DashboardPage from "./Dashboard/DashboardPage"
+import PromotionPage from "./PromotionPage/PromotionPage"
 
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LogInPage/>}></Route>
+        <Route path="/" element={<PromotionPage/>}/>
+        <Route path="/login" element={<LogInPage/>}></Route>
         <Route path="/signup" element={<SignUpPage/>}></Route>
         <Route path="/forgotpassword" element={<ForgotPage/>}></Route>
         <Route path="/forgotpassword/verifyotp" element={<VerifyPage/>}></Route>

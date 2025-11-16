@@ -12,7 +12,7 @@ function SignUpPage() {
       <div className='flex flex-col justify-center items-center  w-[100%] mt-5'>
         <FullLogo/>
         <SignUpForm/>
-        <p>Already have an account?<a href="/" className='hover:underline'>Log in</a></p>
+        <p>Already have an account?<a href="/login" className='hover:underline'>Log in</a></p>
       </div>
       <div className='flex items-end'>
         <img src={crowdRight} alt="crowd on right" className='w-150 h-100 hidden md:block' />

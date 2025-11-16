@@ -91,7 +91,7 @@ function VerifyForm() {
       console.log("OTP Verification Successful:", response.data);
       alert("OTP verified successfully!");
 
-      navigate('/');
+      navigate('/login');
 
     } catch (error) {
       console.error("OTP Verification Failed:", error.response ? error.response.data : error.message);
