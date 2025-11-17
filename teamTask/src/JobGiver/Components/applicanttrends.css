@@ -1,0 +1,43 @@
+.applicant-trends h3 {
+  font-size: 1.25rem;
+}
+
+.trends-chart {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.trends-chart img {
+  width: 100%; 
+  border: 1px dashed var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-item::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.legend-item.blue-dot::before {
+  background-color: var(--primary-blue);
+}
+.legend-item.orange-dot::before {
+  background-color: var(--warning-orange);
+}

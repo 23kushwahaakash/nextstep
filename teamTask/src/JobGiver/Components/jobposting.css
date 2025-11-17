@@ -1,0 +1,63 @@
+.job-postings-table {
+  padding: 1.5rem;
+}
+
+.table-header h3 {
+  font-size: 1.25rem;
+}
+
+.header-actions .btn-ghost {
+  padding: 0.5rem;
+}
+.header-actions .icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-table th, .job-table td {
+  padding: 1rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.job-table th {
+  font-size: 0.85rem;
+  color: var(--light-text);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.job-table td {
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+.job-table td:first-child {
+  font-weight: 700;
+}
+
+.job-table td .btn-ghost {
+  padding: 0.25rem;
+}
+.job-table td .icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .job-postings-table {
+    overflow-x: auto;
+  }
+  .job-table {
+    min-width: 600px;
+  }
+}

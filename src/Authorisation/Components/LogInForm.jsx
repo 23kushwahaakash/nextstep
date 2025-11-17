@@ -3,11 +3,13 @@ import {useState} from "react";
 import google from "../Images/google.png";
 import facebook from "../Images/facebook.png";
 import apple from "../Images/apple.png";
-
+import { useNavigate } from "react-router-dom";
 function LogInForm() {
+  const navigate=useNavigate();
     const [showPassword,setShowPassword]=useState(false);
     const togglePasswordVisibility=()=>setShowPassword(!showPassword);
-
+const handleLogin=()=>{navigate("/jobgiver");
+}
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center w-100 md:w-[100%] bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
@@ -54,7 +56,7 @@ function LogInForm() {
                 <a href="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</a>
             </div>
           </form>
-          <button 
+          <button onClick={handleLogin}
            type="submit" 
            className="relative overflow-hidden bg-[#15294B]  py-[2%] px-[25%] mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
           >

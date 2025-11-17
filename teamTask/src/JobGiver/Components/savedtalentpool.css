@@ -1,0 +1,50 @@
+.saved-talent-pool h3 {
+  font-size: 1.25rem;
+}
+
+.talent-pool-header .view-all-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+
+.talent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.talent-item {
+  width: 100%;
+}
+
+.talent-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.talent-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.talent-role {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  margin: 0;
+}
+
+.talent-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.talent-actions .btn-ghost {
+  padding: 0.5rem;
+}
+.talent-actions .icon {
+  width: 20px;
+  height: 20px;
+}

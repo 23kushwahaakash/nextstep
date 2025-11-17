@@ -1,0 +1,52 @@
+.company-profile {
+  padding: 1.5rem;
+}
+
+.profile-header h3 {
+  font-size: 1.25rem;
+}
+
+.profile-header .btn-ghost {
+  color: var(--primary-blue);
+  font-weight: 600;
+  padding: 0.25rem;
+}
+.profile-header .icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.25rem;
+}
+
+.profile-completeness-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--success-green);
+  border-radius: 5px;
+}
+
+.completeness-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+}
+
+.profile-tip {
+  background-color: var(--bg-light-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--body-text);
+}
+.profile-tip .icon {
+  width: 20px;
+  height: 20px;
+}

@@ -15,7 +15,7 @@ import About from "./AboutPage/About"
 import SubmitPage from "./SubmitPage/SubmitPage"
 import DashboardPage from "./Dashboard/DashboardPage"
 import PromotionPage from "./PromotionPage/PromotionPage"
-
+import JobGiverHome from "./JobGiver/Components/home.jsx"
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/jobseeker/profile/submit" element={<SubmitPage/>}></Route>
         <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
+        <Route path="/jobgiver" element={<JobGiverHome/>}></Route>
       </Routes>
     </div>
   )
