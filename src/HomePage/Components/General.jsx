@@ -4,7 +4,7 @@ import Comment from "../Images/Comment.png"
 import Share from "../Images/Share.png"
 import Follow from "../Images/Follow.png"
 import Satya from "../Images/Satya.png"
-import World from "../Images/World.png"
+import World from "../Images/world.png"
 
 function General() {
   return (

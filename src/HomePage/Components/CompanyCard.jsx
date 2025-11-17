@@ -1,4 +1,4 @@
-import World from "../Images/World.png"
+import World from "../Images/world.png"
 import Like from "../Images/Like.png"
 import Share from "../Images/Share.png"
 import Download from "../Images/Download.png"
