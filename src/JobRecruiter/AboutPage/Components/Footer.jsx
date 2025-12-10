@@ -48,17 +48,22 @@ const Footer = () => (
           <p className="text-sm mb-4">
             The latest job news, articles, sent to your inbox weekly.
           </p>
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="p-3 w-full rounded-l-lg text-gray-900 focus:outline-none"
-            />
-            <button className="bg-gray-900 text-white px-5 rounded-r-lg hover:bg-gray-700 transition duration-300">
-              Subscribe
-            </button>
-          </div>
-        </div>
+          
+          <div className="flex items-center space-x-3">
+    
+    <input
+      type="email"
+      placeholder="Email Address"
+      className="bg-white text-gray-900 px-4 py-3 rounded-full focus:outline-none flex-grow"
+    />
+    
+    <button 
+      className="bg-gray-900 text-white font-semibold px-5 py-3 rounded-full transition duration-300 hover:bg-gray-700 shadow-md min-w-[120px]"
+    >
+      Subscribe
+    </button>
+  </div>
+</div>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-sm">

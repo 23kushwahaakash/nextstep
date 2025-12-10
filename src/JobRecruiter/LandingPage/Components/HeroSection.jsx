@@ -40,7 +40,7 @@ const HeroSection = () => (
       </p>
 
       <div className="flex space-x-4 mb-20">
-        <button className="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-gray-200 shadow-lg">
+        <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
           Post A Job Now
         </button>
         <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">

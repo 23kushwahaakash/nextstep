@@ -9,7 +9,7 @@ import BellIcon from '../Images/bell.svg';
 import LogoIcon from '../Images/logo.svg';
 import ArrowIcon from '../Images/arrow-down.svg';   
 const Header = () => (
-  <header className="fixed top-0 w-full z-20 bg-white shadow-md border-b-4 border-blue-600">
+  <header className="fixed top-0 w-full z-20 bg-white shadow-md ">
     <div className="flex justify-between items-center px-6 py-2 h-16">
       
       <div className="flex items-center space-x-6 w-3/5">
@@ -64,11 +64,11 @@ const Header = () => (
     </div>
 </div>
 
-<div className=" border-2 shadow-sm border border-blue-900 hover:bg-gray-950">
+<div className="profile">
     <img 
         src={Profile}
         alt="Profile" 
-        className="w-8 h-8 cursor-pointer object-cover bg-blue-900 " 
+        className="w-8 h-8 cursor-pointer object-cover rounded-full bg-blue-900 hover:bg-gray-500" 
     />
 </div>
       </nav>
