@@ -17,7 +17,7 @@ import DashboardPage from "./Dashboard/DashboardPage"
 import PromotionPage from "./PromotionPage/PromotionPage"
 import LandingPage from "./JobRecruiter/LandingPage/Pages/LandingPage"
 import AboutPage from "./JobRecruiter/AboutPage/Pages/AboutPage"
-
+import JRDashboardPage from "./JobRecruiter/DashboardPage/Pages/JRDashboardPage"
 function App() {
   return (
     <div>
@@ -39,6 +39,7 @@ function App() {
         <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
        <Route path="/jobrecruiter/landingpage" element={<LandingPage/>}></Route>
        <Route path="/jobrecruiter/aboutpage" element={<AboutPage/>}></Route>
+       <Route path="/jobrecruiter/dashboardpage" element={<JRDashboardPage/>}></Route>
       </Routes>
     </div>
   )
