@@ -1,7 +1,7 @@
-import NextStep from "../Images/logo.svg"
-import Facebook from "../Images/facebook.svg"
-import Apple from "../Images/apple.svg"
-import Google from "../Images/google.svg"
+import NextStep from '../Images/logo.svg';
+import Facebook from'../Images/facebook.svg';
+import Apple from '../Images/apple.svg';
+import Google from '../Images/google.svg';
 
 
 function Footer() {
@@ -68,8 +68,7 @@ function Footer() {
         </div>
     </div>
 
-    
-  )
-}
+  );
+};
 
 export default Footer
