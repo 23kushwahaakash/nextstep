@@ -3,7 +3,7 @@ import HeroBackground from '../images/hero-bg.svg';
 import CandidateIcon from '../images/candidates.svg';
 import RecruiterIcon from '../images/recruiters.svg';
 import GrowthIcon from '../images/growth.svg';
-
+import { useNavigate } from "react-router-dom";
 
 const StatCard = ({ icon, value, label }) => (
   <div className="flex flex-col items-center text-center">
@@ -13,10 +13,12 @@ const StatCard = ({ icon, value, label }) => (
     <span className="text-3xl font-bold">{value}</span>
     <span className="text-sm text-gray-300">{label}</span>
   </div>
+  
 );
 
 const HeroSection = () => (
   <section className="relative h-[650px] overflow-hidden bg-gray-900">
+    
     <div 
       className="absolute inset-0 bg-cover bg-center" 
       style={{ 
@@ -29,7 +31,7 @@ const HeroSection = () => (
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
     </div>
-
+    
   
     <div className="relative flex flex-col items-center justify-center h-full text-white pt-24">
       <h1 className="text-6xl font-extrabold mb-6 text-center leading-tight">
@@ -40,10 +42,10 @@ const HeroSection = () => (
       </p>
 
       <div className="flex space-x-4 mb-20">
-        <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
+        <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg " onClick={()=>navigate("/jobrecruiter/HomePage")}>
           Post A Job Now
         </button>
-        <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
+        <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg" onClick={()=>navigate("/jobrecruiter/ProfilePage")}>
           Create Recruiter Profile
         </button>
       </div>
