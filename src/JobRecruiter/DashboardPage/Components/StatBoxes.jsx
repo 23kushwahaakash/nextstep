@@ -3,7 +3,7 @@ import React from 'react';
 const StatBox = ({ title, count, bgColor }) => (
   <div className={`p-6 rounded-xl shadow-md ${bgColor} text-gray-900 w-full`}>
     <p className="text-gray-600 text-sm mb-2">{title}</p>
-    <h3 className="text-4xl font-extrabold">{count}</h3>
+    <h3 className="text-yellow-500 text-4xl font-extrabold">{count}</h3>
   </div>
 );
 
