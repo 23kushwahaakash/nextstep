@@ -35,4 +35,4 @@ const JRDashboardPage = () => {
   );
 };
 
-export default JRDashboardPage;
+export default JRDashboardPage
