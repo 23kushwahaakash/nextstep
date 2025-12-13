@@ -33,9 +33,10 @@ function JRProfilePage() {
         </div>
         <div className="w-full px-5 md:px-25 mt-10">
           <h2 className="text-xl font-semibold mb-6">Personal Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">            <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">            
+          <div>
               <label className="block text-sm font-medium mb-1">
-               Full Name<span className="text-red-500">*</span>
+                Full Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -61,6 +62,7 @@ function JRProfilePage() {
                   className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
                 />
               </div>
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -87,6 +89,11 @@ function JRProfilePage() {
                  <select className="ml-2 outline-none">
                   <option>+91</option>
                   <option>+1</option>
+                  <option>+86</option>
+                  <option>+33</option>
+                  <option>+49</option>
+                  <option>+52</option>
+                  <option>+44</option>
                 </select>
                 <input
                   type="text"
@@ -191,7 +198,7 @@ function JRProfilePage() {
       <div className="flex justify-center mt-10 mb-10">
         <button 
         className="bg-[#0F2B46] text-white px-10 py-3 rounded-md font-medium hover:opacity-90 transition"
-        onClick={()=>navigate("/jobseeker/profile/submit")}>
+        onClick={()=>navigate("/jobrecruiter/submitpage")}>
           Submit Application
         </button>
       </div>
