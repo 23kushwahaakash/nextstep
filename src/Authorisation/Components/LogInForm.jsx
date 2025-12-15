@@ -7,6 +7,7 @@ import facebook from "../Images/facebook.png";
 import apple from "../Images/apple.png";
 import axios from "axios";
 import { USER_API_ENDPOINT } from "../../APIs/Data";
+import { Link } from "react-router-dom";
 
 function LogInForm() {
   const navigate=useNavigate();
@@ -101,7 +102,7 @@ function LogInForm() {
                     <input  type="checkbox"  placeholder="Password"/>
                      Remember me
                 </label>
-                <a href="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</a>
+                <Link to="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</Link>
             </div>
             <button 
            type="submit" 
