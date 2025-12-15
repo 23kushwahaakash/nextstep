@@ -52,8 +52,8 @@ function LogInForm() {
     }
 
   return (
-    <div className="flex justify-center flex-col shadow-lg items-center w-100 md:w-[100%] bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
-        <div className="w-[100%] max-w-[430px] flex justify-center items-center flex-col">
+    <div className="flex justify-center flex-col shadow-lg items-center w-100 md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
+        <div className="w-full max-w-[430px] flex justify-center items-center flex-col">
           <h1 className=" mb-5 mt-5 text-2xl font-bold">Login</h1>
           <form
            className="w-[80%]"

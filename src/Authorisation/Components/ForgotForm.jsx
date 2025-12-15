@@ -5,8 +5,8 @@ function ForgotForm() {
   const navigate = useNavigate(); 
 
   return (
-    <div className="flex justify-center flex-col shadow-lg items-center md:w-[100%] bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
-        <div className="md:w-[100%] flex justify-center items-center flex-col">
+    <div className="flex justify-center flex-col shadow-lg items-center md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
+        <div className="md:w-full flex justify-center items-center flex-col">
           <h1 className=" mb-5 mt-5 text-2xl font-bold">Forgot Password</h1>
           <form className="w-[80%]">
             <div className="flex gap-2 mb-7 mt-15 border-b border-gray-300">

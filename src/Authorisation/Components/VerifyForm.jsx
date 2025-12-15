@@ -103,9 +103,9 @@ function VerifyForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col shadow-lg items-center md:w-[100%] bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5">
-      <div className="md:w-[100%] flex justify-center items-center flex-col mb-10">
-        <div className="flex gap-35 w-[100%]">
+    <div className="flex justify-center flex-col shadow-lg items-center md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5">
+      <div className="md:w-full flex justify-center items-center flex-col mb-10">
+        <div className="flex gap-35 w-full">
           <button
             onClick={() => window.history.back()}
             className="hover:shadow-xl border flex justify-center items-center border-gray-300 w-12 rounded-4xl mt-2 ml-2 h-12"
