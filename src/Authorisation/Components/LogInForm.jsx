@@ -9,6 +9,7 @@ import axios from "axios";
 import { USER_API_ENDPOINT } from "../../APIs/Data";
 
 function LogInForm() {
+  const navigate=useNavigate();
     const [showPassword,setShowPassword]=useState(false);
     const togglePasswordVisibility=()=>setShowPassword(!showPassword);
 

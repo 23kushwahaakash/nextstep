@@ -1,0 +1,45 @@
+.applicant-pipeline h3 {
+  font-size: 1.25rem;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.pipeline-stage {
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.stage-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+.stage-count {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.pipeline-stage.new { border-left: 4px solid var(--primary-blue); }
+.pipeline-stage.review { border-left: 4px solid var(--info-purple); }
+.pipeline-stage.interview { border-left: 4px solid var(--warning-orange); }
+.pipeline-stage.hired { border-left: 4px solid var(--success-green); }
+.pipeline-stage.message { border-left: 4px solid var(--light-text); }
+
+@media (max-width: 992px) {
+  .pipeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+}

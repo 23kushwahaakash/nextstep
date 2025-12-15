@@ -1,4 +1,4 @@
-function SmallerTabs({icon: Icon, title,navigation}) {
+function SmallerTabs({icon: Icon, title}) {
   return (
     <div>
         <div className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
