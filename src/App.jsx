@@ -21,7 +21,7 @@ import PromotionPage from "./PromotionPage/PromotionPage"
 function App() {
   return (
     <div>
-      <Toaster position="top-right" reverseOrder={false}/>
+      {/* <Toaster position="top-right" reverseOrder={false}/> */}
       <Routes>
         <Route path="/" element={<PromotionPage/>}/>
         <Route path="/login" element={<LogInPage/>}></Route>
@@ -34,7 +34,7 @@ function App() {
         <Route path="/jobseeker" element={<JSLandingPage/>}></Route>
         <Route path="/jobseeker/home" element={<HomePage/>}></Route>
         <Route path="/jobseeker/jobs" element={<JobPage/>}></Route>
-        <Route path="jobseeker/profile" element={<ProfilePage/>}></Route>
+        <Route path="/jobseeker/profile" element={<ProfilePage/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/jobseeker/profile/submit" element={<SubmitPage/>}></Route>
         <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
