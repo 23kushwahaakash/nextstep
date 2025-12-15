@@ -18,8 +18,6 @@ function LogInForm() {
       password:""
     });
 
-    const navigate=useNavigate();
-
     const changeEventHandler=(e)=>{
       setInput({...input,[e.target.name]:e.target.value});
     }
