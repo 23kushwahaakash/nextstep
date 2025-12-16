@@ -16,7 +16,6 @@ const StatCard = ({ icon, value, label }) => (
 );
 
 const HeroSection = () => (
-  // Changed h-[650px] to min-h-[650px] and added py-12 for mobile breathing room
   <section className="relative min-h-[650px] md:h-[750px] overflow-hidden bg-gray-900 py-12 md:py-0">
     
     <div 
@@ -33,7 +32,6 @@ const HeroSection = () => (
     </div>
     
     <div className="relative flex flex-col items-center justify-center h-full text-white px-4 md:pt-24">
-      {/* Adjusted text sizes: text-4xl on mobile, text-6xl on desktop */}
       <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-center leading-tight">
         Hire the <span className="text-emerald-400">Right Talent</span> Faster!
       </h1>
@@ -42,7 +40,6 @@ const HeroSection = () => (
         Post jobs, manage candidates, and build your employer brand - all in one place.
       </p>
 
-      {/* Changed flex-row to flex-col on mobile to prevent button squishing */}
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-12 md:mb-20 w-full md:w-auto px-6 md:px-0">
         <Link to="/jobrecruiter/HomePage" className="w-full md:w-auto">
           <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
@@ -56,7 +53,6 @@ const HeroSection = () => (
         </Link>
       </div>
 
-      {/* Adjusted spacing and scale for the stats section */}
       <div className="flex justify-center space-x-6 md:space-x-16 mt-4">
         <StatCard icon={CandidateIcon} value="1M+" label="Active Candidates" />
         <StatCard icon={RecruiterIcon} value="50K+" label="Verified Recruiters" />
