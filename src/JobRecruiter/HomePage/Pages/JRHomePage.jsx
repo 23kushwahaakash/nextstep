@@ -9,62 +9,55 @@ import SavedTalentPool from '../Components/SavedTalentPool';
 import Footer from '../Components/Footer';
 import AddPost from '../Components/AddPost';
 import Companies from '../Components/Companies';
-import CompanyCards from '../Components/CompanyCards';
 
 const JRHomePage = () => {
   return (
-    <div className='bg-[#F1F5FA]'>
+    <div className='bg-[#F1F5FA] min-h-screen'>
       <Header/>
-      <div className='bg-white w-[90%] md:w-[95%] shadow-lg pt-[12%] md:pt-[6%] mx-auto flex flex-col justify-center items-center'>
-          <AddPost className="pb-5"></AddPost>
+      <div className='bg-white w-full md:w-[95%] shadow-lg pt-[20%] md:pt-[6%] mx-auto flex flex-col items-center overflow-x-hidden'>
+          <AddPost />
           <Companies/>
         
-    <div className="bg-white min-h-screen">
-
-      <div className="p-6 md:p-10 max-w-7xl mx-auto">
-        
-        <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome back, Mayank!</h1>
-        <p className="text-gray-600 mb-6">Here's what's happening with your job postings today.</p>
+          <div className="bg-white w-full">
+            <div className="p-4 md:p-10 max-w-7xl mx-auto">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Welcome back, Mayank!</h1>
+              <p className="text-gray-600 mb-6">Here's what's happening with your job postings today.</p>
 
         <div className="space-y-4 mb-8">
-            <div className="p-4 bg-blue-100 rounded-lg flex justify-between items-center">
-                <p className="text-blue-800">👤 You have 12 new applicants this week</p>
+        <div className="p-4 bg-blue-100 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">                <p className="text-blue-800">👤 You have 12 new applicants this week</p>
                 <button className="text-sm font-semibold text-blue-800 hover:text-blue-950">Review Applicants</button>
             </div>
-            <div className="p-4 bg-yellow-100 rounded-lg flex justify-between items-center">
-                <p className="text-yellow-800">ⓘ Your Frontend Developer job post is expiring in 2 days</p>
+            <div className="p-4 bg-yellow-100 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">                <p className="text-yellow-800">ⓘ Your Frontend Developer job post is expiring in 2 days</p>
                 <button className="text-sm font-semibold text-yellow-800 hover:text-yellow-950">Extend Post</button>
             </div>
-            <div className="p-4 bg-green-100 rounded-lg flex justify-between items-center">
-                <p className="text-green-800">📈 Your job posts received 45% more views this week</p>
+            <div className="p-4 bg-green-100 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">                <p className="text-green-800">📈 Your job posts received 45% more views this week</p>
                 <button className="text-sm font-semibold text-green-800 hover:text-green-950">View Analytics</button>
             </div>
-            <div className="p-4 bg-purple-100 rounded-lg flex justify-between items-center">
-                <p className="text-purple-800">💡 Based on your recent postings, here are 5 suggested candidates</p>
+            <div className="p-4 bg-purple-100 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">                <p className="text-purple-800">💡 Based on your recent postings, here are 5 suggested candidates</p>
                 <button className="text-sm font-semibold text-purple-800 hover:text-purple-950">View Suggestions</button>
             </div>
         </div>
 
         <KeyStats />
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div className="lg:col-span-2">
-                <JobPostingsTable />
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                  <div className="lg:col-span-2 overflow-x-auto">
+                      <JobPostingsTable />
+                  </div>
+                  <div className="lg:col-span-1">
+                      <CompanyProfile />
+                  </div>
+              </div>
+              
+              <ApplicantPipeline />
+              <DashboardAnalytics />
+              <SavedTalentPool />
             </div>
-            <div className="lg:col-span-1">
-                <CompanyProfile />
-            </div>
-        </div>
-        
-        <ApplicantPipeline />
-        <DashboardAnalytics />
-        <SavedTalentPool />
-      </div>
-      </div>
+          </div>
       </div>
       <Footer />
     </div>
   );
 };
 
-export default JRHomePage
+export default JRHomePage;

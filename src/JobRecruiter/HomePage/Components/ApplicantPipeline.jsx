@@ -53,31 +53,25 @@ const ApplicantCard = ({ candidate }) => (
     </div>
 );
 
-const ApplicantPipeline = () => {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-8">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4">Applicant Pipeline</h2>
-        
-        <div className="flex space-x-4 overflow-x-auto pb-4">
-            {pipelineStages.map(stage => (
-                <div key={stage.title} className="flex-shrink-0 w-64">
-                    <div className="mb-3">
-                        <h3 className="font-medium text-gray-700 flex items-center">
-                            {stage.title}
-                            <span className={`ml-2 px-2 py-0.5 text-xs font-semibold rounded-full ${stage.color}`}>{stage.count}</span>
-                        </h3>
-                    </div>
-                    
-                    <div className="space-y-3">
-                        {stage.candidates.map(candidate => (
-                            <ApplicantCard key={candidate.name} candidate={candidate} />
-                        ))}
-                    </div>
-                </div>
-            ))}
-        </div>
+const ApplicantPipeline = () => (
+    <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 mb-8">
+      <h2 className="text-xl font-semibold text-gray-800 mb-6">Applicant Pipeline</h2>
+      <div className="flex space-x-4 overflow-x-auto pb-6 scrollbar-hide">
+        {pipelineStages.map(stage => (
+          <div key={stage.title} className="flex-shrink-0 w-[280px] md:w-72 bg-gray-50/50 p-3 rounded-xl border border-gray-100">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="font-semibold text-gray-700 text-sm uppercase tracking-wider">{stage.title}</h3>
+              <span className={`px-2.5 py-0.5 text-xs font-bold rounded-full ${stage.color}`}>{stage.count}</span>
+            </div>
+            <div className="space-y-3">
+              {stage.candidates.map(candidate => (
+                <ApplicantCard key={candidate.name} candidate={candidate} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-};
-
-export default ApplicantPipeline;
+  
+  export default ApplicantPipeline;
