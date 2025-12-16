@@ -1,6 +1,5 @@
 import {Routes,Route,Link,NavLink} from "react-router-dom"
 import { Toaster } from "react-hot-toast"
-import React from 'react'
 import LogInPage from "./Authorisation/Pages/LogInPage"
 import SignUpPage from "./Authorisation/Pages/SignUpPage"
 import ForgotPage from "./Authorisation/Pages/ForgotPage"
@@ -17,7 +16,6 @@ import SubmitPage from "./SubmitPage/SubmitPage"
 import DashboardPage from "./Dashboard/Pages/Dashboard"
 import PromotionPage from "./PromotionPage/PromotionPage"
 import LandingPage from "./JobRecruiter/LandingPage/Pages/LandingPage"
-import AboutPage from "./JobRecruiter/AboutPage/Components/AboutPage"
 import JRDashboardPage from "./JobRecruiter/DashboardPage/Pages/JRDashboardPage"
 import JRHomePage from "./JobRecruiter/HomePage/Pages/JRHomePage"
 import JRProfilePage from "./JobRecruiter/ProfilePage/Pages/JRProfilePage"
@@ -43,12 +41,11 @@ function App() {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/jobseeker/profile/submit" element={<SubmitPage/>}></Route>
         <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
-       <Route path="/jobrecruiter/landingpage" element={<LandingPage/>}></Route>
-       <Route path="/jobrecruiter/aboutpage" element={<AboutPage/>}></Route>
-       <Route path="/jobrecruiter/dashboardpage" element={<JRDashboardPage/>}></Route>
-       <Route path="/jobrecruiter/homepage" element={<JRHomePage/>}></Route>
-       <Route path="/jobrecruiter/profilepage" element={<JRProfilePage/>}></Route>
-       <Route path="/jobrecruiter/submitpage" element={<JRSubmitPage/>}></Route>
+        <Route path="/jobrecruiter" element={<LandingPage/>}></Route>
+        <Route path="/jobrecruiter/dashboard" element={<JRDashboardPage/>}></Route>
+        <Route path="/jobrecruiter/home" element={<JRHomePage/>}></Route>
+        <Route path="/jobrecruiter/profile" element={<JRProfilePage/>}></Route>
+        <Route path="/jobrecruiter/profile/submit" element={<JRSubmitPage/>}></Route>
       </Routes>
     </div>
   )

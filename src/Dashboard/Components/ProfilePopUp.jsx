@@ -48,19 +48,19 @@ function ProfilePopUp({ onClose }) {
           <span>Dashboard</span>
         </button>
         
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobseeker/chat")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/chats")}>
           <Mail className="w-5 h-5" />
           <span>Messages</span>
         </button>
 
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/settings")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("")}>
           <Settings className="w-5 h-5" />
           <span>Settings</span>
         </button>
       </div>
 
       <div className="border-t border-gray-200 py-1">
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" onClick={()=>navigate("/logout")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" onClick={()=>navigate("")}>
           <LogOut className="w-5 h-5" />
           <span>Logout</span>
         </button>

@@ -5,7 +5,7 @@ import Flying from "./Flying.png"
 import Check from "./Check.png"
 import Header from './Header'
 import Footer from './Footer'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 
 function JRSubmitPage() {
     const navigate=useNavigate()
@@ -45,9 +45,9 @@ function JRSubmitPage() {
                     <p className='text-md text-gray-500'>
                         You will receive a status update in an email from NextStep within a few weeks
                          of submitting your application. In the meantime, you can view and track all 
-                         your applications in the NextStep {<a className='text-green-500 font-semibold hover-underline cursor-pointer' href='/jobseeker/jobs'>Jobs</a>} section at any time.
+                         your applications in the NextStep {<Link className='text-green-500 font-semibold hover-underline cursor-pointer' to=''>Jobs</Link>} section at any time.
                     </p>
-                    <a href="#" className='text-violet-800 underline cursor-pointer'>Check your applications on Recent Activities</a>
+                    <Link to="#" className='text-violet-800 underline cursor-pointer'>Check your applications on Recent Activities</Link>
                   </div>
                   <div className='flex justify-center mb-15'>
                     <button 

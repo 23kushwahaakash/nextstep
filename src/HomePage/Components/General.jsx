@@ -5,6 +5,7 @@ import Share from "../Images/Share.png"
 import Follow from "../Images/Follow.png"
 import Satya from "../Images/Satya.png"
 import World from "../Images/world.png"
+import { Link } from "react-router-dom"
 
 function General() {
   return (
@@ -17,7 +18,7 @@ function General() {
           <span className="relative z-10 text-sm md:text-lg md:px-20">Companies</span>
           <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
           </button>
-          <a href="#" className='text-blue-400 text-sm md:text-lg hover:underline'>View all</a>
+          <Link to="#" className='text-blue-400 text-sm md:text-lg hover:underline'>View all</Link>
         </div>
         <div className='flex flex-col border border-gray-700 rounded-lg mb-5 p-2 md:p-5 w-[80%] mx-auto'>
                 <div className="flex border-b border-gray-300 mb-3 ">
@@ -37,7 +38,7 @@ function General() {
                 </div>
                 <div>
                     <h1 className="font-serif mb-1 font-semibold">What does Satya Nadella really look for in a new hire? You might be surprised.</h1>
-                        <h1 className="pb-2">Mr. Nadella made waves last month for his comments on AI's role in productivity, but what has he been consistent on for a decade?<a className="text-blue-700 cursor-pointer">more..</a></h1>
+                        <h1 className="pb-2">Mr. Nadella made waves last month for his comments on AI's role in productivity, but what has he been consistent on for a decade?<Link to="" className="text-blue-700 cursor-pointer">more..</Link></h1>
                     <img src={Satya} alt="Satya" />
                     <div className="flex justify-between pt-2">
                         <div className="flex gap-3">

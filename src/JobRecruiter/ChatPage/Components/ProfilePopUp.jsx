@@ -22,7 +22,7 @@ function ProfilePopUp({ onClose }) {
   return (
     <div
       ref={popoverRef}
-      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[60]"
+      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-60"
     >
       <div className="px-4 py-3 border-b border-gray-200">
         <div className="flex items-center gap-3">
@@ -38,29 +38,29 @@ function ProfilePopUp({ onClose }) {
 
      
       <div className="py-1">
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobrecruiter/ProfilePage")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobrecruiter/profile")}>
           <UserCircle className="w-5 h-5" />
           <span>View Profile</span>
         </button>
 
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobrecruiter/DashboardPage")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobrecruiter/dashboard")}>
           <LayoutDashboard className="w-5 h-5" />
           <span>Dashboard</span>
         </button>
         
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobrecruiter/ChatPage")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/chats")}>
           <Mail className="w-5 h-5" />
           <span>Messages</span>
         </button>
 
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/settings")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("")}>
           <Settings className="w-5 h-5" />
           <span>Settings</span>
         </button>
       </div>
 
       <div className="border-t border-gray-200 py-1">
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" onClick={()=>navigate("/logout")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" onClick={()=>navigate("")}>
           <LogOut className="w-5 h-5" />
           <span>Logout</span>
         </button>

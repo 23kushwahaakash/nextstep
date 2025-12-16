@@ -4,6 +4,7 @@ import ProfileIcon from '../Images/dot.svg';
 import ApplicantsIcon from '../Images/dot.svg';
 import JobPostsIcon from '../Images/dot.svg';
 import LogoutIcon from '../Images/dot.svg'; 
+import {Link} from 'react-router-dom'
 
 const navItems = [
   { name: 'Dashboard', icon: DashboardIcon, link: '/dashboard', active: true },
@@ -34,9 +35,9 @@ const Sidebar = () => {
 
           <nav className="space-y-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.link}
+                to={item.link}
                 className={`flex items-center space-x-3 p-3 rounded-lg transition duration-200 
                   ${item.active 
                     ? 'bg-blue-600 text-white font-bold' 
@@ -45,16 +46,16 @@ const Sidebar = () => {
               >
                 <img src={item.icon} alt={item.name} className="h-5 w-5 filter invert" />
                 <span>{item.name}</span>
-              </a>
+              </Link>
             ))}
             
-            <a 
-              href="/logout"
+            <Link  
+              to=""
               className="flex items-center space-x-3 p-3 text-red-400 hover:bg-slate-800 rounded-lg transition duration-200 mt-8" 
             >
               <img src={LogoutIcon} alt="Logout" className="h-5 w-5 filter invert" />
               <span>Logout</span>
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

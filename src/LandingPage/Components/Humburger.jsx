@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Home, MessageCircle, Briefcase, X ,User,LayoutDashboard} from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,51 +41,51 @@ function Hamburger() {
         </div>
 
         <nav className="flex flex-col px-4 gap-2">
-          <a 
-            href="/jobseeker/profile" 
+          <Link 
+            to="/jobseeker/profile" 
             onClick={closeMenu}
             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             <User className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Profile</span>
-          </a>
+          </Link>
 
-          <a 
-            href="/jobseeker/dashboard" 
+          <Link  
+            to="/jobseeker/dashboard" 
             onClick={closeMenu}
             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             <LayoutDashboard className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Dashboard</span>
-          </a>
+          </Link>
 
-          <a 
-            href="/home" 
+          <Link 
+            to="/jobseeker/home" 
             onClick={closeMenu}
             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             <Home className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Home</span>
-          </a>
+          </Link>
 
-          <a 
-            href="/chats" 
+          <Link 
+            to="/chats" 
             onClick={closeMenu}
             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             <MessageCircle className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Chats</span>
             <span className="ml-auto bg-blue-600 text-white text-xs px-2 py-1 rounded-full">0</span>
-          </a>
+          </Link>
 
-          <a 
-            href="/jobs" 
+          <Link 
+            to="/jobseeker/jobs" 
             onClick={closeMenu}
             className="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             <Briefcase className="w-5 h-5 text-gray-700" />
             <span className="text-gray-700 font-medium">Jobs</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </>

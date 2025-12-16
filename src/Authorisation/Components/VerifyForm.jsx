@@ -1,6 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import toast from "react-hot-toast"
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation ,Link} from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
@@ -149,9 +149,9 @@ function VerifyForm() {
         </form>
         <h1>
           Didn't receive the code?
-          <a href="/forgotpassword" className="hover:underline mb-10 text-blue-500">
+          <Link to="/forgotpassword" className="hover:underline mb-10 text-blue-500">
             {" "}Resend OTP
-          </a>
+          </Link>
         </h1>
       </div>
     </div>

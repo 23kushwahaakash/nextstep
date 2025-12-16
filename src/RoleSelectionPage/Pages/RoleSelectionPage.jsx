@@ -44,7 +44,7 @@ function RoleSelectionPage() {
                   tagline1="Become an Employer"
                   tagline2="Hire the best talent for your team. Post jobs, manage applications, and grow your company effortlessly."
                   button="Start Hiring"
-                  navigateTo=""
+                  navigateTo="/jobrecruiter"
                 />
             </div>
             <div className="hidden md:block">

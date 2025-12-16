@@ -3,6 +3,7 @@ import GoogleOffice from "../Images/GoogleOffice.png"
 import MicrosoftLogo from "../Images/MicrosoftLogo.png"
 import MicrosoftOffice from "../Images/MicrosoftOffice.png" 
 import CompanyCard from './CompanyCard'
+import { Link } from "react-router-dom"
 
 function Companies() {
   return (
@@ -16,7 +17,7 @@ function Companies() {
           <span className="relative z-10 text-sm md:text-lg md:px-20">Companies</span>
           <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
           </button>
-          <a href="#" className='text-blue-400 text-sm md:text-lg hover:underline'>View all</a>
+          <Link to="#" className='text-blue-400 text-sm md:text-lg hover:underline'>View all</Link>
         </div>
 
         <div className="md:grid grid-cols-2 gap-5">
