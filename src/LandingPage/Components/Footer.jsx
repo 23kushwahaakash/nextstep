@@ -2,6 +2,7 @@ import NextStep from "../Images/NextStep.png"
 import Facebook from "../Images/facebook.png"
 import Apple from "../Images/apple.png"
 import Google from "../Images/google.png"
+import {Link} from "react-router-dom"
 
 
 function Footer() {
@@ -18,7 +19,7 @@ function Footer() {
                 </div>
             </div>
             <div className="hidden md:block flex flex-col gap-3 grid-col-2">
-                <h1 className="text-xl font-semibold "><a href="/about" className="hover:underline cursor-pointer">About</a></h1>
+                <h1 className="text-xl font-semibold "><Link to="/about" className="hover:underline cursor-pointer">About</Link></h1>
                 <h1>Companies</h1>
                 <h1>Pricing</h1>
                 <h1>Terms</h1>

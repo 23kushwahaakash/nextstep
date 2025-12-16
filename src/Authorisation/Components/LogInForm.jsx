@@ -60,8 +60,8 @@ function LogInForm() {
            onSubmit={submitHandler}
            >
             <div className="flex gap-2 mb-7 border-b border-gray-300">
-               <label htmlFor="email"><Mail/></label>
-               <div className=" mb-3">
+              <label htmlFor="email"><Mail/></label>
+              <div className=" mb-3">
                 <input 
                 type="email" 
                 id="email"
@@ -71,46 +71,46 @@ function LogInForm() {
                 placeholder="Enter your Email address" 
                 className="focus:outline-none"
                 />
-                </div>
-                </div>
+              </div>
+            </div>
             
             <div className="flex flex-between gap-2 mb-3 pb-2 border-b border-gray-300">
-            <div className="grid grid-cols-2">
-              <div className="flex gap-2">
-                <label htmlFor="password"><Lock/></label>
-                <input 
-                type={showPassword ? "text" :"password"} 
-                id="password" 
-                name="password" 
-                value={input.password}
-                onChange={changeEventHandler}
-                placeholder="Enter your Password"
-                className="focus:outline-none" 
-                />
-              </div>
-              <div className="flex justify-end">
-                {showPassword?(
-                  <EyeOff onClick={togglePasswordVisibility} className="cursor-pointer "/>)
-                  :(
-                  <Eye onClick={togglePasswordVisibility} className="cursor-pointer"/>)
+              <div className="grid grid-cols-2">
+                <div className="flex gap-2">
+                  <label htmlFor="password"><Lock/></label>
+                  <input 
+                  type={showPassword ? "text" :"password"} 
+                  id="password" 
+                  name="password" 
+                  value={input.password}
+                  onChange={changeEventHandler}
+                  placeholder="Enter your Password"
+                  className="focus:outline-none" 
+                 />
+                </div>
+                <div className="flex justify-end">
+                  {showPassword?(
+                    <EyeOff onClick={togglePasswordVisibility} className="cursor-pointer "/>)
+                    :(
+                    <Eye onClick={togglePasswordVisibility} className="cursor-pointer"/>)
                   }
+                </div>
               </div>
-            </div>
             </div>
             <div className="flex justify-between items-center pb-5 ">
-                <label className="text-xs flex gap-1">
-                    <input  type="checkbox"  placeholder="Password"/>
-                     Remember me
-                </label>
-                <Link to="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</Link>
+              <label className="text-xs flex gap-1">
+                <input  type="checkbox"  placeholder="Password"/>
+                  Remember me
+              </label>
+              <Link to="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</Link>
             </div>
             <button 
-           type="submit" 
-           className="relative overflow-hidden bg-[#15294B]  py-[2%] px-[25%] mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
-          >
-          <span className="relative z-10">Log in</span>
-          <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-          </button>
+            type="submit" 
+            className="relative overflow-hidden w-full bg-[#15294B]  py-[2%] px-full mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
+            >
+              <span className="relative z-10">Log in</span>
+              <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+            </button>
           </form>
           
           <p className="text-gray-400">or continue with</p>

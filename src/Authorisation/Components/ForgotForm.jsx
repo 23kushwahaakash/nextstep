@@ -1,5 +1,5 @@
 import {Mail} from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link} from "react-router-dom";
 
 function ForgotForm() {
   const navigate = useNavigate(); 
@@ -29,7 +29,7 @@ function ForgotForm() {
           <span className="relative z-10">Send OTP</span>
           <span className="absolute inset-0 bg-gray-300 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
           </button>
-          <a href="/login" className="hover:underline mb-10 text-blue-500">Back to Login</a>
+          <Link to="/login" className="hover:underline mb-10 text-blue-500">Back to Login</Link>
         </div>
     </div>
   )
