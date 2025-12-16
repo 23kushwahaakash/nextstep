@@ -3,7 +3,7 @@ import HeroBackground from '../images/hero-bg.svg';
 import CandidateIcon from '../images/candidates.svg';
 import RecruiterIcon from '../images/recruiters.svg';
 import GrowthIcon from '../images/growth.svg';
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const StatCard = ({ icon, value, label }) => (
   <div className="flex flex-col items-center text-center">
@@ -42,12 +42,16 @@ const HeroSection = () => (
       </p>
 
       <div className="flex space-x-4 mb-20">
+        <Link to="/jobrecruiter/HomePage">
         <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg " onClick={()=>navigate("/jobrecruiter/HomePage")}>
           Post A Job Now
         </button>
+        </Link>
+        <Link to="/jobrecruiter/ProfilePage">
         <button className="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg" onClick={()=>navigate("/jobrecruiter/ProfilePage")}>
           Create Recruiter Profile
         </button>
+        </Link>
       </div>
 
       <div className="flex justify-center space-x-16 mt-8">

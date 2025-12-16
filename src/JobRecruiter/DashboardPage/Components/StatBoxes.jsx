@@ -8,7 +8,7 @@ const StatBox = ({ title, count, bgColor }) => (
 );
 
 const StatBoxes = () => (
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 " >
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
     <StatBox title="Total Job Posted" count="12" bgColor="bg-gray-100"/>
     <StatBox title="Total Applicants" count="7" bgColor="bg-gray-100" />
     <StatBox title="Pending Reviews" count="9" bgColor="bg-gray-100" />

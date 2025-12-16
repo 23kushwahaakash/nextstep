@@ -16,10 +16,9 @@ import SubmitPage from "./SubmitPage/SubmitPage"
 import DashboardPage from "./Dashboard/DashboardPage"
 import PromotionPage from "./PromotionPage/PromotionPage"
 import LandingPage from "./JobRecruiter/LandingPage/Pages/LandingPage"
-import AboutPage from "./JobRecruiter/AboutPage/Pages/AboutPage"
+import AboutPage from "./JobRecruiter/AboutPage/Components/AboutPage"
 import JRDashboardPage from "./JobRecruiter/DashboardPage/Pages/JRDashboardPage"
 import JRHomePage from "./JobRecruiter/HomePage/Pages/JRHomePage"
-import NotificationPage from "./JobRecruiter/NotificationPage/Pages/NotificationPage"
 import JRProfilePage from "./JobRecruiter/ProfilePage/Pages/JRProfilePage"
 import JRSubmitPage from "./JobRecruiter/SubmitPage/JRSubmitPage"
 function App() {
@@ -45,7 +44,6 @@ function App() {
        <Route path="/jobrecruiter/aboutpage" element={<AboutPage/>}></Route>
        <Route path="/jobrecruiter/dashboardpage" element={<JRDashboardPage/>}></Route>
        <Route path="/jobrecruiter/homepage" element={<JRHomePage/>}></Route>
-       <Route path="/jobrecruiter/notifications" element={<NotificationPage/>}></Route>
        <Route path="/jobrecruiter/profilepage" element={<JRProfilePage/>}></Route>
        <Route path="/jobrecruiter/submitpage" element={<JRSubmitPage/>}></Route>
       </Routes>

@@ -12,10 +12,9 @@ function Header() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full fixed top-0 left-0 z-50 bg-[#F5F8FD]  py-1 md:py-3 px-2 md:px-6 flex items-center justify-between">
+    <div className="w-full top-0 left-0 z-50 bg-[#F5F8FD]  py-1 md:py-3 px-2 md:px-6 flex items-center justify-between">
 
-      
-      
+
       <div className="flex gap-5">
         <div className="flex ">
           <Humburger/>
