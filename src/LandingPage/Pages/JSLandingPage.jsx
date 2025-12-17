@@ -27,13 +27,13 @@ function JSLandingPage() {
       <FeaturedJobsSection/>
       <TestimonialsSection/>
       <div className='flex flex-col justify-center items-center'>
-        <h1 className='text-2xl font-serif pt-10 pb-10'>We are trusted by the world's largest companies</h1>
-        <div className='w-full flex justify-evenly pb-20'>
-          <img src={Yahoo} alt="yahoo" />
-          <img src={Microsoft2} alt="microsoft" />
-          <img src={Youtube} alt="youtube" />
-          <img src={Lenovo} alt="lenovo" />
-          <img src={Samsung} alt="samsung" />
+        <h1 className='md:text-2xl text-xl  text-center font-serif pt-10 pb-10'>We are trusted by the world's largest companies</h1>
+        <div className='w-full flex justify-evenly md:pb-20 pb-10'>
+          <img src={Yahoo} alt="yahoo" className='w-15 h-7 md:w-50 md:h-15' />
+          <img src={Microsoft2} alt="microsoft" className='w-15 h-7 md:w-50 md:h-15' />
+          <img src={Youtube} alt="youtube" className='w-15 h-7 md:w-50 md:h-15'/>
+          <img src={Lenovo} alt="lenovo" className='w-15 h-7 md:w-50 md:h-15'/>
+          <img src={Samsung} alt="samsung" className='w-15 h-7 md:w-50 md:h-15'/>
         </div>
       </div>
       <Footer/>

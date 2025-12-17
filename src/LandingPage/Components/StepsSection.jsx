@@ -8,27 +8,27 @@ import Verified from "../Images/Verified.png"
 function StepsSection() {
   return (
     <div className='bg-[#F1F5FA] mt-8 w-full px-15 shadow-lg'>
-      <h1 className='text-3xl font-serif pt-15 pb-10 flex flex-col justify-center items-center'>Only 4 Steps to get your dream job</h1>
-      <div className='grid grid-cols-7 pb-20'>
+      <h1 className='md:text-3xl text-center text-xl font-serif md:pt-15 py-5 md:pb-10 flex flex-col justify-center items-center'>Only 4 Steps to get your dream job</h1>
+      <div className='grid md:grid-cols-7 md:pb-20 pb-5'>
         <div className="flex flex-col justify-center items-center py-2 gap-2 px-5">
             <img src={AddUser} alt="add user"/>
             <h1>Create Account</h1>
         </div>
-        <div className="flex items-start py-2">
+        <div className="hidden md:flex items-start py-2">
             <img src={ArrowToDown} alt="arrow down" />
         </div>
         <div className="flex flex-col justify-center items-center gap-2 py-2  px-5 rounded-lg">
             <img src={Upload} alt="upload" />
             <h1>Upload CV/Resume</h1>
         </div>
-        <div className="flex items-end py-2">
+        <div className="hidden md:flex items-end py-2">
             <img src={ArrowToUp} alt="arrow up" />
         </div>
         <div className="flex flex-col justify-center items-center gap-2 py-2 px-5">
             <img src={Find} alt="find" />
             <h1>Find suitable job</h1>
         </div>
-        <div className="flex items-start py-2">
+        <div className="hidden md:flex items-start py-2">
             <img src={ArrowToDown} alt="arrow down" />
         </div>
         <div className="flex flex-col justify-center items-center gap-2 py-2 px-5">
