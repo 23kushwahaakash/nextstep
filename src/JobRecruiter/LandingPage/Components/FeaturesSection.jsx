@@ -1,10 +1,10 @@
 import React from 'react';
-import AiMatchingIcon from '../images/ai-matching.svg';
-import VerifiedIcon from '../images/verified.svg';
-import AnalyticsIcon from '../images/analytics.svg';
-import BulkPostIcon from '../images/bulk-post.svg';
-import CollaborationIcon from '../images/collaboration.svg';
-import BrandingIcon from '../images/branding.svg';
+import AiMatchingIcon from '../Images/ai-matching.svg';
+import VerifiedIcon from '../Images/verified.svg';
+import AnalyticsIcon from '../Images/analytics.svg';
+import BulkPostIcon from '../Images/bulk-post.svg';
+import CollaborationIcon from '../Images/collaboration.svg';
+import BrandingIcon from '../Images/branding.svg';
 
 
 const FeatureCard = ({ icon, title, description, iconBg }) => (
