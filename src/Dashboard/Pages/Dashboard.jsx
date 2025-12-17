@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../Components/Header'; 
-import Footer from '../Components/Footer';
-import Sidebar from '../Components/Sidebar';
-import StatBoxes from '../Components/StatBoxes';
-import JobPostsTable from '../Components/JobPostsTable';
+import Header from '../../LandingPage/Components/Header'; 
+import Footer from '../../LandingPage/Components/Footer';
+import Sidebar from '../../JobRecruiter/DashboardPage/Components/Sidebar';
+import StatBoxes from '../../JobRecruiter/DashboardPage/Components/StatBoxes';
+import JobPostsTable from '../../JobRecruiter/DashboardPage/Components/JobPostsTable';
 
 const DashboardPage = () => {
   return (
