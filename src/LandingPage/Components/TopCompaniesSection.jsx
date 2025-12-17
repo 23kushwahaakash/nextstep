@@ -7,10 +7,10 @@ import CompanyCards from "./CompanyCards"
 function TopCompaniesSection() {
   return (
     <div className='bg-[#F1F5FA] w-full flex flex-col min-h-screen justify-center items-center mt-8 shadow-lg '>
-        <h1 className='font-serif text-5xl mb-5 pt-8'>Top Companies</h1>
-        <h1>Discover some of the world's most innovative and</h1>
-        <h1 className="pb-12">leading companies offering exciting career opportunities and growth </h1>
-        <div className="grid grid-cols-4 gap-5 w-full px-15">
+        <h1 className='font-serif md:text-5xl text-3xl mb-5 pt-8'>Top Companies</h1>
+        <h1 className="text-center px-2">Discover some of the world's most innovative and</h1>
+        <h1 className="pb-12 text-center">leading companies offering exciting career opportunities and growth </h1>
+        <div className="grid md:grid-cols-4 gap-5 w-full px-15">
             <CompanyCards
             logo={Instagram}
             title="Instagram"

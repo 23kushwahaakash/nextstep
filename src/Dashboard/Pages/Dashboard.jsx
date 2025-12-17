@@ -10,7 +10,7 @@ const DashboardPage = () => {
     <div className="h-screen flex flex-col bg-gray-50 overflow-hidden">
       <Header />
       
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex pt-5 flex-1 overflow-hidden">
         <Sidebar />
 
         <div className="flex-1 flex flex-col min-w-0 ml-0 lg:ml-64 transition-all duration-300 overflow-y-auto">

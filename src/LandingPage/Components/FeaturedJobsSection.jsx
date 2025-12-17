@@ -6,10 +6,10 @@ import VacancyCard from './VacancyCard'
 
 function FeaturedJobsSection() {
   return (
-    <div className='mt-15 flex flex-col justify-center items-center w-full px-60 pb-15'>
-        <h1 className='text-4xl font-serif mb-5'>Featured Jobs</h1>
-        <h1 className='text-xl mb-10'>Freshly released job applications</h1>
-        <div className='grid grid-cols-2 grid-rows-2 gap-5 pb-15'>
+    <div className='mt-15 px-5 flex flex-col justify-center items-center w-full md:px-60 pb-15'>
+        <h1 className='md:text-4xl text-2xl text-center font-serif mb-5'>Featured Jobs</h1>
+        <h1 className='md:text-xl text-md mb-10'>Freshly released job applications</h1>
+        <div className='grid md:grid-cols-2 md:grid-rows-2 gap-5 pb-15'>
             <VacancyCard
             logo={Flipkart}
             name="Flipkart"
