@@ -1,8 +1,8 @@
 import React from 'react';
-import FlipkartLogo from '../images/flipkart.svg';
-import ZomatoLogo from '../images/zomato.svg';
-import TcsLogo from '../images/tcs.svg';
-import MicrosoftLogo from '../images/microsoft.svg';
+import FlipkartLogo from '../Images/flipkart.svg';
+import ZomatoLogo from '../Images/zomato.svg';
+import TcsLogo from '../Images/tcs.svg';
+import MicrosoftLogo from '../Images/microsoft.svg';
 
 const CompaniesSection = () => {
   const logos = [
