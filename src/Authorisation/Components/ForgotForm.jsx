@@ -1,8 +1,44 @@
 import {Mail} from "lucide-react";
+import { useState } from "react";
 import { useNavigate,Link} from "react-router-dom";
+import axios from "axios";
+import { setUserEmail } from "../../Redux/authSlice";
+import { AUTH_API_ENDPOINT } from "../../APIs/Data";
+import {useDispatch} from 'react-redux';
+import toast from "react-hot-toast";
 
 function ForgotForm() {
   const navigate = useNavigate(); 
+  const dispatch =useDispatch();
+
+  const [email,setEmail]=useState("");
+
+  const submitHandler = async (e)=>{
+    e.preventDefault();
+
+    if (!email) {
+        toast.error("Please fill the field!");
+        return;
+    }
+
+    try{
+      const res = await axios.post(
+        `${AUTH_API_ENDPOINT}/forgotpassword`,
+        {email},{
+          headers:{
+            "Content-Type":"application/json",
+          },
+          withCredentials:true,
+        }
+      );
+      toast.success("Email Sent Successfully!");
+          dispatch(setUserEmail(email));
+          navigate('/forgotpassword/verifyotp');
+    }
+    catch{
+      toast.error("Some Error Occurred!");
+    }
+  }
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center w-[250%] md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
@@ -14,7 +50,9 @@ function ForgotForm() {
                <div className=" mb-3">
                 <input 
                 type="email" 
-                id="email" 
+                id="email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)} 
                 placeholder="Enter your Email address" 
                 className="focus:outline-none placeholder:text-xs"
                 />
@@ -22,8 +60,8 @@ function ForgotForm() {
             </div>
           </form>
           <button 
-           type="submit" 
-           onClick={() => navigate('/forgotpassword/verifyotp')}
+           type="button" 
+           onClick={submitHandler}
            className="relative overflow-hidden bg-[#15294B] px-[25%]  py-5 mb-3 rounded-md text-white text-2xl transition-colors duration-300 hover:text-[#15294B] group"
           >
           <span className="relative z-10">Send OTP</span>

@@ -11,7 +11,7 @@ function UpdatedPasswordForm() {
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center w-[250%] md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
-        <div className="md:w-[100%] flex justify-center items-center flex-col mt-20 mb-15">
+        <div className="md:w-full flex justify-center items-center flex-col mt-20 mb-15">
             <img src={checkMark} alt="checkMark" className="w-15 h-15" />
             <h1 className=" mb-5 mt-5 text-2xl font-bold">Updated</h1>
             <h1>Congratulations! Your password is updated</h1>

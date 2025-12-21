@@ -20,6 +20,7 @@ import JRDashboardPage from "./JobRecruiter/DashboardPage/Pages/JRDashboardPage"
 import JRHomePage from "./JobRecruiter/HomePage/Pages/JRHomePage"
 import JRProfilePage from "./JobRecruiter/ProfilePage/Pages/JRProfilePage"
 import JRSubmitPage from "./JobRecruiter/SubmitPage/JRSubmitPage"
+import VerifyPage2 from "./Authorisation/Pages/VerifyPage2"
 
 function App() {
   return (
@@ -29,8 +30,9 @@ function App() {
         <Route path="/" element={<PromotionPage/>}/>
         <Route path="/login" element={<LogInPage/>}></Route>
         <Route path="/signup" element={<SignUpPage/>}></Route>
+        <Route path="/signup/verifyotp" element={<VerifyPage/>}></Route>
         <Route path="/forgotpassword" element={<ForgotPage/>}></Route>
-        <Route path="/forgotpassword/verifyotp" element={<VerifyPage/>}></Route>
+        <Route path="/forgotpassword/verifyotp" element={<VerifyPage2/>}></Route>
         <Route path="/forgotpassword/verifyotp/createnew" element={<CreateNewPasswordPage/>}></Route>
         <Route path="/forgotpassword/verifyotp/createnew/updated" element={<UpdatedPasswordPage/>}></Route>
         <Route path="/signup/roleselection" element={<RoleSelectionPage/>}></Route>

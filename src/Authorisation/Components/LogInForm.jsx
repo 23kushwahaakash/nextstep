@@ -6,40 +6,60 @@ import google from "../Images/google.png";
 import facebook from "../Images/facebook.png";
 import apple from "../Images/apple.png";
 import axios from "axios";
-import { USER_API_ENDPOINT } from "../../APIs/Data";
+import { AUTH_API_ENDPOINT } from "../../APIs/Data";
+import {useDispatch} from 'react-redux';
+import {setUserId,setUserName,setUserEmail,setAccessToken,setRefreshToken,} from "../../Redux/authSlice";
+
 
 function LogInForm() {
   const navigate=useNavigate();
-    const [showPassword,setShowPassword]=useState(false);
-    const togglePasswordVisibility=()=>setShowPassword(!showPassword);
+  const dispatch = useDispatch();
 
-    const [input,setInput]=useState({
-      email:"",
-      password:""
-    });
+  const [showPassword,setShowPassword]=useState(false);
+  const togglePasswordVisibility=()=>setShowPassword(!showPassword);
 
-    const changeEventHandler=(e)=>{
-      setInput({...input,[e.target.name]:e.target.value});
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const [input,setInput]=useState({
+    email:"",
+    password:""
+  });
+
+  const changeEventHandler=(e)=>{
+    setInput({...input,[e.target.name]:e.target.value});
+  }
+
+  const submitHandler= async (e)=>{
+    e.preventDefault();
+      if (!input.email || !input.password) {
+        toast.error("Please fill in all fields!");
+        return;
     }
 
-    const submitHandler= async (e)=>{
-      e.preventDefault();
-      console.log(input);
+    if (!agreedToTerms) {
+      toast.error("Please agree to the Terms of Services!");
+        return;
+    }
 
-      try {
+    try {
 
-        const res = await axios.post(
-          `${USER_API_ENDPOINT}/login`,
-          input,{
-            headers:{
-              "Content-Type":"application/json",
-            },
-            withCredentials:true,
+      const res = await axios.post(
+        `${AUTH_API_ENDPOINT}/login`,
+        input,{
+          headers:{
+            "Content-Type":"application/json",
+          },
+          withCredentials:true,
           }
         );
-        if(res.data.success){
+        if(res.data.accesstoken){
+          dispatch(setUserId(res.data.user._id));
+          dispatch(setUserName(res.data.user.fullname));
+          dispatch(setUserEmail(res.data.user.email));
+          dispatch(setAccessToken(res.data.accesstoken));
+          dispatch(setRefreshToken(res.data.refreshtoken));
           navigate("/signup/roleselection");
-          toast.success(res.data.message);
+          toast.success("Login Successful!");
         }
         
       } catch (error) {
@@ -98,7 +118,12 @@ function LogInForm() {
             </div>
             <div className="flex justify-between items-center pb-5 ">
               <label className="text-xs flex gap-1">
-                <input  type="checkbox"  placeholder="Password"/>
+                <input  
+                type="checkbox"  
+                placeholder="Password"
+                checked={agreedToTerms}
+                onChange={(e)=>setAgreedToTerms(e.target.checked)}
+                />
                   Remember me
               </label>
               <Link to="/forgotpassword" className="hover:underline text-blue-800 text-xs">Forgot Password?</Link>
