@@ -53,7 +53,7 @@ function ProfilePopUp({ onClose }) {
   return (
     <div
       ref={popoverRef}
-      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[60]"
+      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-60"
     >
       <div className="px-4 py-3 border-b border-gray-200">
         <div className="flex items-center gap-3">
