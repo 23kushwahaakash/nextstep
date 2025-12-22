@@ -1,22 +1,24 @@
 import { ArrowLeft } from "lucide-react";
-import toast from "react-hot-toast"
-import { useNavigate, useLocation ,Link} from "react-router-dom";
+import toast from "react-hot-toast";
+import { useNavigate, Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 import { AUTH_API_ENDPOINT } from "../../APIs/Data";
 
-function VerifyForm() {
+function VerifyForm2() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const email = location.state?.email;
+  
+  const email = useSelector((state) => state.auth.userEmail);
+  
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [isLoading, setIsLoading] = useState(false);
   const inputRefs = useRef([]);
 
   useEffect(() => {
     if (!email) {
-      toast.error("No email found. Please sign up again.");
-      navigate('/signup');
+      toast.error("No email found. Please start the process again.");
+      navigate('/forgotpassword');
     }
   }, [email, navigate]);
 
@@ -65,8 +67,8 @@ function VerifyForm() {
     }
 
     if (!email) {
-      toast.error("Email is missing. Please sign up again.");
-      navigate('/signup');
+      toast.error("No email found. Please start the process again.");
+      navigate('/forgotpassword');
       return;
     }
 
@@ -81,7 +83,7 @@ function VerifyForm() {
       console.log("Sending OTP verification:", requestData);
 
       const response = await axios.post(
-        `${AUTH_API_ENDPOINT}/verifyOTP`,
+        `${AUTH_API_ENDPOINT}/verifyresetOTP`,
         requestData,
         {
           headers: {
@@ -92,12 +94,14 @@ function VerifyForm() {
 
       console.log("OTP Verification Successful:", response.data);
       toast.success("OTP verified successfully!");
-
-      navigate('/login');
+      
+      navigate('/forgotpassword/verifyotp/createnew');
 
     } catch (error) {
       console.error("OTP Verification Failed:", error.response ? error.response.data : error.message);
-      toast.error("OTP Verification Failed! " + (error.response?.data?.message || error.message));
+      
+      const errorMessage = error.response?.data?.message || "Invalid OTP. Please try again.";
+      toast.error(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -159,4 +163,4 @@ function VerifyForm() {
   );
 }
 
-export default VerifyForm;
+export default VerifyForm2;

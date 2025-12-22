@@ -36,6 +36,7 @@ function RoleSelectionPage() {
                   tagline1="Become a Candidate"
                   tagline2="Connect with recruiters and take the next step in your career"
                   button="Apply Now"
+                  role="Jobseeker"
                   navigateTo="/jobseeker"
                 />
             </div>
@@ -44,6 +45,7 @@ function RoleSelectionPage() {
                   tagline1="Become an Employer"
                   tagline2="Hire the best talent for your team. Post jobs, manage applications, and grow your company effortlessly."
                   button="Start Hiring"
+                  role="JobsGiver"
                   navigateTo="/jobrecruiter"
                 />
             </div>

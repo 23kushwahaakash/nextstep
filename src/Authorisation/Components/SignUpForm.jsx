@@ -4,7 +4,7 @@ import toast from "react-hot-toast"
 import google from "../Images/google.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { USER_API_ENDPOINT } from "../../APIs/Data";
+import { AUTH_API_ENDPOINT } from "../../APIs/Data";
 
 function SignUpForm() {
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ function SignUpForm() {
         }
         
         if (password !== confirmpassword) {
-            toast.error("Wrong Password");
+            toast.error("Password Mismatch!");
             return;
         }
 
@@ -47,7 +47,7 @@ function SignUpForm() {
 
         try {
             const response = await axios.post(
-                `${USER_API_ENDPOINT}/signUp`,
+                `${AUTH_API_ENDPOINT}/SignUp`,
                 userData,
                 {
                     headers: {
@@ -56,7 +56,7 @@ function SignUpForm() {
                 }
             );
             console.log("Signup Successful:", response.data);
-            navigate('/forgotpassword/verifyotp', { state: { email: email } });
+            navigate('/signup/verifyotp', { state: { email: email } });
         } catch (error) {
             console.error("Signup Failed:", error.response ? error.response.data : error.message);
             toast.error("Signup Failed! " + (error.response?.data?.message || error.message));

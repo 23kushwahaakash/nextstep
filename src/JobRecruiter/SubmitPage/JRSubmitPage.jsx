@@ -3,8 +3,8 @@ import CrowdLeft from './CrowdLeft.png'
 import CrowdRight from './CrowdRight.png'
 import Flying from "./Flying.png"
 import Check from "./Check.png"
-import Header from './Header'
-import Footer from './Footer'
+import Header from '../../LandingPage/Components/Header'
+import Footer from '../../LandingPage/Components/Footer'
 import { useNavigate,Link } from 'react-router-dom'
 
 function JRSubmitPage() {

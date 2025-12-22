@@ -1,10 +1,41 @@
 import { useRef, useEffect } from "react";
 import { User, Settings, LogOut, UserCircle, Mail,LayoutDashboard} from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector} from "react-redux";
+import toast from "react-hot-toast";
+import {clearAuth} from "../../Redux/authSlice"
+import {AUTH_API_ENDPOINT} from "../../APIs/Data"
 
 function ProfilePopUp({ onClose }) {
   const popoverRef = useRef(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const accessToken = useSelector(state => state.auth.accessToken);
+  const userEmail = useSelector(state => state.auth.userEmail);
+  const userPass = useSelector(state => state.auth.userPass);
+
+  const handleLogOut = async () => {
+    try{
+      await axios.post(`${AUTH_API_ENDPOINT}/logout`,
+        {
+          email:userEmail,
+          password:userPass
+        },
+        {
+          headers:{
+            Authorization:`Bearer ${accessToken}`
+          }
+        }
+      );
+      toast.success("Logged Out Successfully!");
+      dispatch(clearAuth());
+      navigate("/");
+    }
+    catch{
+      toast.error("Error!")
+    }
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -22,7 +53,7 @@ function ProfilePopUp({ onClose }) {
   return (
     <div
       ref={popoverRef}
-      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[60]"
+      className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-60"
     >
       <div className="px-4 py-3 border-b border-gray-200">
         <div className="flex items-center gap-3">
@@ -60,7 +91,9 @@ function ProfilePopUp({ onClose }) {
       </div>
 
       <div className="border-t border-gray-200 py-1">
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" onClick={()=>navigate("")}>
+        <button 
+        className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-red-600 transition-colors" 
+        onClick={handleLogOut}>
           <LogOut className="w-5 h-5" />
           <span>Logout</span>
         </button>

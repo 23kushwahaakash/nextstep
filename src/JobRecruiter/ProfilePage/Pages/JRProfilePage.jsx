@@ -1,8 +1,8 @@
 import Square from "../Images/Square.png"
 import Upload from "../Images/Upload.png"
 import UploadIcon from "../Images/UploadIcon.png"
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import Header from '../../../LandingPage/Components/Header'
+import Footer from '../../../LandingPage/Components/Footer'
 import { useNavigate } from "react-router-dom"
 
 function JRProfilePage() {

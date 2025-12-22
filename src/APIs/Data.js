@@ -1,1 +1,4 @@
-export const USER_API_ENDPOINT="https://job-seeking-app-1-5auy.onrender.com/api/v1/user"
+export const AUTH_API_ENDPOINT="https://job-seeking-app-1-5auy.onrender.com/api/v1/user"
+export const JOBSEEKER_API_ENDPOINT="https://job-seeking-app-1-5auy.onrender.com/api/v1/jobseeker"
+export const JOBGIVER_API_ENDPOINT="https://job-seeking-app-1-5auy.onrender.com/api/v1/jobgiver"
+export const JOB_API_ENDPOINT="https://job-seeking-app-1-5auy.onrender.com/api/v1/job"

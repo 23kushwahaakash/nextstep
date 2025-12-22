@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../Components/Header';
+import Header from '../../../LandingPage/Components/Header';
 import KeyStats from '../Components/KeyStats';
 import JobPostingsTable from '../Components/JobPostingsTable';
 import CompanyProfile from '../Components/CompanyProfile';
 import ApplicantPipeline from '../Components/ApplicantPipeline';
 import DashboardAnalytics from '../Components/DashboardAnalytics';
 import SavedTalentPool from '../Components/SavedTalentPool';
-import Footer from '../Components/Footer';
+import Footer from '../../../LandingPage/Components/Footer';
 import AddPost from '../Components/AddPost';
 import Companies from '../Components/Companies';
 

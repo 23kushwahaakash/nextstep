@@ -1,9 +1,9 @@
 import FullLogo from '../Components/FullLogo'
 import crowdLeft from '../Images/CrowdLeft.png'
 import crowdRight from '../Images/CrowdRight.png'
-import  VerifyForm from '../Components/VerifyForm'
+import  VerifyForm2 from '../Components/VerifyForm2'
 
-function VerifyPage() {
+function VerifyPage2() {
   return (
     <div className='grid grid-cols-3 min-h-screen'>
       <div className='flex items-end'>
@@ -11,7 +11,7 @@ function VerifyPage() {
       </div>
       <div className='flex flex-col justify-center items-center  w-full mt-5'>
         <FullLogo/>
-        <VerifyForm/>
+        <VerifyForm2/>
       </div>
       <div className='flex items-end'>
         <img src={crowdRight} alt="crowd on right" className='w-150 h-100 hidden md:block' />
@@ -20,4 +20,4 @@ function VerifyPage() {
   )
 }
 
-export default VerifyPage
+export default VerifyPage2
