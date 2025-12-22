@@ -32,10 +32,20 @@ const authSlice = createSlice({
         },
         setUserPass:(state, action)=>{
             state.userPass=action.payload;
+        },
+
+        clearAuth: (state) =>{
+            state.userId=null;
+            state.userName = null;
+            state.userEmail = null;
+            state.userRole = null;
+            state.accessToken = null;
+            state.refreshToken = null;
+            state.userPass = null;
         }
     }
 });
 
-export const {setUserId,setUserName,setUserEmail,setUserRole,setAccessToken,setRefreshToken,setUserPass} = authSlice.actions;
+export const {setUserId,setUserName,setUserEmail,setUserRole,setAccessToken,setRefreshToken,setUserPass,clearAuth} = authSlice.actions;
 export default authSlice.reducer;
 export const authSliceReducer = authSlice.reducer;
