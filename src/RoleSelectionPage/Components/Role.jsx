@@ -1,6 +1,6 @@
 import { useNavigate} from "react-router-dom";
 import toast from "react-hot-toast";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {setUserRole} from "../../Redux/authSlice";
 import axios from "axios";
 import { AUTH_API_ENDPOINT } from "../../APIs/Data";
@@ -8,6 +8,7 @@ import { AUTH_API_ENDPOINT } from "../../APIs/Data";
 function Role({tagline1,tagline2,button,role,navigateTo}) {
     const navigate = useNavigate(); 
     const dispatch = useDispatch();
+    const accessToken = useSelector(state => state.auth.accessToken);
 
     const handleClick=async()=>{
       try{
@@ -15,7 +16,7 @@ function Role({tagline1,tagline2,button,role,navigateTo}) {
           `${AUTH_API_ENDPOINT}/roleselection`,
           {role},{
             headers:{
-              "Content-Type":"application/json",
+              Authorization:`Bearer ${accessToken}`,
             }, 
             withCredentials: true,
           }
