@@ -4,6 +4,7 @@ import UploadIcon from "../Images/UploadIcon.png"
 import Header from '../../LandingPage/Components/Header'
 import Footer from '../../LandingPage/Components/Footer'
 import { useNavigate } from "react-router-dom"
+import { handleResumeUpload } from "../resumeUpload"
 
 function ProfilePage() {
   const navigate=useNavigate();
@@ -15,11 +16,21 @@ function ProfilePage() {
         <img src={Square} alt="square " className="absolute md:translate-x-280 translate-x-50 pt-30" />  
         <div className="mx-auto w-[70%] md:w-[20%] mt-20 bg-white border border-gray-200 rounded-xl shadow-lg flex flex-col items-center justify-center text-center p-6">
           
-          <img 
+          <label 
+          htmlFor="resumeUpload"
+          className="cursor-pointer">
+            <img 
             src={Upload} 
             alt="Upload" 
             className="w-16 h-16 mb-4"
           />
+          <input 
+          id="resumeUpload"
+          type="file"
+          accept=".pdf, .doc, .docx"
+          hidden
+          onChange={handleResumeUpload} />
+          </label>
 
           <p className="text-green-600 font-medium text-lg">
             Browse photo or drop here
