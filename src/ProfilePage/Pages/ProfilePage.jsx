@@ -1,7 +1,6 @@
 import Square from "../Images/Square.png"
 import Upload from "../Images/Upload.png"
 import Check from "../../SubmitPage/Check.png"
-import UploadIcon from "../Images/UploadIcon.png"
 import Header from '../../LandingPage/Components/Header'
 import Footer from '../../LandingPage/Components/Footer'
 import { useNavigate } from "react-router-dom"
@@ -10,13 +9,18 @@ import { handleResumeUpload } from "../resumeUpload"
 import toast from "react-hot-toast"
 import { JOBSEEKER_API_ENDPOINT } from "../../APIs/Data"
 import axios from "axios"
+import { useDispatch } from "react-redux";
+import NextStep from "../../Authorisation/Images/logo.png"
+import {setbio, setexperienceinfo, setfirstname, sethighesteduinfo, setid,setlanguagechosen, setlastname, setphonenum, setresume, setskills, setuserid} from "../../Redux/profileSlice"
 
 function ProfilePage() {
   const accessToken = localStorage.getItem("accessToken");
 
   const [uploaded, setUploaded]=useState(false);
+  const[loading, setLoading] = useState(false);
   
   const navigate=useNavigate();
+  const dispatch = useDispatch();
 
   const [firstName, setFirstName] = useState("");
 
@@ -56,6 +60,7 @@ function ProfilePage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const userData = {
     firstName,
@@ -68,7 +73,7 @@ function ProfilePage() {
     experience:`${experience.company}, ${experience.role}, ${experience.duration}, ${experience.description}`
   };
   try{
-    await axios.post(
+    const res = await axios.post(
       `${JOBSEEKER_API_ENDPOINT}/profilemanage`,
       userData,{
         headers:{
@@ -77,17 +82,50 @@ function ProfilePage() {
         withCredentials:true,
       }
     );
+    console.log(res.data); 
+
+    dispatch(setbio(res.data.profile.bio));
+    dispatch(setlanguagechosen(res.data.profile.chooselanguage));
+    dispatch(sethighesteduinfo(res.data.profile.education));
+    dispatch(setexperienceinfo(res.data.profile.experience));
+    dispatch(setfirstname(res.data.profile.firstName));
+    dispatch(setid(res.data.profile._id));
+    dispatch(setlastname(res.data.profile.lastName));
+    dispatch(setphonenum(res.data.profile.phonenumber));
+    dispatch(setresume(res.data.profile.resume));
+    dispatch(setskills(res.data.profile.skills));
+    dispatch(setuserid(res.data.profile.userId));
+
+
+
     toast.success("Profile submitted successfully!")
     navigate("/jobseeker/profile/submit");
-  }catch{
-    toast.error("Profile not submitted!")
+  }catch(error){
+    toast.error(error.message);
+  }finally{
+    setLoading(false);
   }
   }
   
 
   return (
     <div className='bg-[#F6F9FE]'>
-      <Header/>
+      {loading && (
+              <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+                {/* Logo */}
+                <img
+                src={NextStep}
+                alt="Loading"
+                className="w-20 mb-6"
+                />
+                {/* Spinner */}
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+                <p className="mt-4 text-blue-600 font-bold text-m">
+                  Submitting your profile...
+                </p>
+              </div>
+            )}
+            <Header/>
       <div className="relative min-h-screen overflow-hidden">
         <img src={Square} alt="square" className=" absolute pt-10  -ml-50 md:-ml-120"/>
         <img src={Square} alt="square " className="absolute md:translate-x-280 translate-x-50 pt-30" />  

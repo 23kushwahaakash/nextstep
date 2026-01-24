@@ -3,6 +3,7 @@ import toast from "react-hot-toast"
 import {useState} from "react";
 import {useNavigate,Link} from "react-router-dom"
 import google from "../Images/google.png";
+import NextStep from "../Images/logo.png"
 import facebook from "../Images/facebook.png";
 import apple from "../Images/apple.png";
 import axios from "axios";
@@ -19,6 +20,7 @@ function LogInForm() {
   const togglePasswordVisibility=()=>setShowPassword(!showPassword);
 
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [input,setInput]=useState({
     email:"",
@@ -31,6 +33,8 @@ function LogInForm() {
 
   const submitHandler= async (e)=>{
     e.preventDefault();
+    setLoading(true);
+
       if (!input.email || !input.password) {
         toast.error("Please fill in all fields!");
         return;
@@ -64,15 +68,31 @@ function LogInForm() {
         }
         
       } catch (error) {
-
         toast.error(error.response?.data?.message || "Login failed");
         console.error("Login error:", error);
-        
+      }finally{
+        setLoading(false);
       }
     }
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center w-[250%] md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+          src={NextStep}
+          alt="Loading"
+          className="w-20 mb-6"
+          />
+          {/* Spinner */}
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+          <p className="mt-4 text-blue-600 font-bold text-m">
+            Logging you in...
+          </p>
+        </div>
+      )}
+
         <div className="w-full max-w-[430px] flex justify-center items-center flex-col">
           <h1 className=" mb-5 mt-5 text-2xl font-bold">Login</h1>
           <form

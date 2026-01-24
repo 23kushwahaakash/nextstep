@@ -5,11 +5,13 @@ import {useSelector, useDispatch} from "react-redux"
 import {setUserPass} from "../../Redux/authSlice";
 import { AUTH_API_ENDPOINT } from "../../APIs/Data";
 import axios from "axios";
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
+import NextStep from "../Images/logo.png";
 
 function CreateNewPasswordForm() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -31,6 +33,7 @@ function CreateNewPasswordForm() {
 
     const handleResetPassword = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         if (!input.newpassword || !input.confirmpassword) {
             toast.error("Please fill in all fields!");
@@ -67,12 +70,29 @@ function CreateNewPasswordForm() {
         toast.error(error.response?.data?.message || "Password not changed!");
         console.error("Error:", error);
         
+      }finally{
+        setLoading(false);
       }
     };
 
     return (
         <div className="flex w-[250%] justify-center flex-col shadow-lg items-center md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 p-6">
-            <div className="md:w-full flex justify-center items-center flex-col">
+            {loading && (
+                <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+                    {/* Logo */}
+                    <img
+                      src={NextStep}
+                      alt="Loading"
+                      className="w-20 mb-6"
+                    />
+                    {/* Spinner */}
+                    <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+                    <p className="mt-4 text-blue-600 font-bold text-m">
+                    Changing Password...
+                    </p>
+                </div>
+                  )}
+                  <div className="md:w-full flex justify-center items-center flex-col">
                 <h1 className="mb-5 mt-5 text-2xl font-bold">Create a new password</h1>
                 <div className="w-full">
                     <div className="flex items-center gap-2 border-b border-gray-300 pt-5 pb-2">

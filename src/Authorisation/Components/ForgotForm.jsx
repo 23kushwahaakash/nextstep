@@ -6,15 +6,18 @@ import { setUserEmail } from "../../Redux/authSlice";
 import { AUTH_API_ENDPOINT } from "../../APIs/Data";
 import {useDispatch} from 'react-redux';
 import toast from "react-hot-toast";
+import NextStep from "../Images/logo.png";
 
 function ForgotForm() {
   const navigate = useNavigate(); 
   const dispatch =useDispatch();
 
   const [email,setEmail]=useState("");
+  const [loading, setLoading] = useState(false);
 
   const submitHandler = async (e)=>{
     e.preventDefault();
+    setLoading(true);
 
     if (!email) {
         toast.error("Please fill the field!");
@@ -37,12 +40,29 @@ function ForgotForm() {
     }
     catch{
       toast.error("Some Error Occurred!");
+    }finally{
+      setLoading(false);
     }
   }
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center w-[250%] md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5 ">
-        <div className="w-full flex justify-center items-center flex-col">
+        {loading && (
+        <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+          src={NextStep}
+          alt="Loading"
+          className="w-20 mb-6"
+          />
+          {/* Spinner */}
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+          <p className="mt-4 text-blue-600 font-bold text-m">
+            Sending OTP...
+          </p>
+        </div>
+      )}
+      <div className="w-full flex justify-center items-center flex-col">
           <h1 className=" mb-5 mt-5 text-2xl font-bold">Forgot Password</h1>
           <form className="w-[80%]">
             <div className="flex gap-2 mb-7 mt-15 border-b border-gray-300">

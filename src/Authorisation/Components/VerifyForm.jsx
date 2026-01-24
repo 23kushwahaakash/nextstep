@@ -4,6 +4,7 @@ import { useNavigate, useLocation ,Link} from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { AUTH_API_ENDPOINT } from "../../APIs/Data";
+import NextStep from "../Images/logo.png"
 
 function VerifyForm() {
   const navigate = useNavigate();
@@ -105,7 +106,21 @@ function VerifyForm() {
 
   return (
     <div className="flex justify-center flex-col shadow-lg items-center md:w-full bg-[#F1F5FA] border border-gray-300 rounded-xl mb-5">
-      <div className="md:w-full flex justify-center items-center flex-col mb-10">
+      {isLoading && (
+              <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+                {/* Logo */}
+                <img
+                src={NextStep}
+                alt="Loading"
+                className="w-20 mb-6"
+                />
+                {/* Spinner */}
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+                <p className="mt-4 text-blue-600 font-bold text-m">
+                  Verifying OTP...
+                </p>
+              </div>
+            )}<div className="md:w-full flex justify-center items-center flex-col mb-10">
         <div className="flex gap-35 w-full">
           <button
             onClick={() => window.history.back()}
