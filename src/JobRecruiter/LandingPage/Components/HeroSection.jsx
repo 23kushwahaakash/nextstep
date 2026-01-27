@@ -41,13 +41,13 @@ const HeroSection = () => (
       </p>
 
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-12 md:mb-20 w-full md:w-auto px-6 md:px-0">
-        <Link to="/jobrecruiter/HomePage" className="w-full md:w-auto">
-          <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
+        <Link to="/jobrecruiter/home" className="w-full md:w-auto ">
+          <button className="w-full bg-transparent border-2 pointer-cursor border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
             Post A Job Now
           </button>
         </Link>
-        <Link to="/jobrecruiter/ProfilePage" className="w-full md:w-auto">
-          <button className="w-full bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
+        <Link to="/jobrecruiter/profile" className="w-full md:w-auto ">
+          <button className="w-full bg-transparent border-2 border-white pointer-cursor text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-white hover:text-gray-900 shadow-lg">
             Create Recruiter Profile
           </button>
         </Link>
