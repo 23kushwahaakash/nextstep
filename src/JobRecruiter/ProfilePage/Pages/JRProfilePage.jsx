@@ -4,9 +4,17 @@ import Footer from '../../../LandingPage/Components/Footer'
 import { useNavigate } from "react-router-dom"
 import NextStep from "../../../Authorisation/Images/logo.png";
 import { useState } from "react";
+import { JOBGIVER_API_ENDPOINT } from "../../../APIs/Data";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function JRProfilePage() {
   const navigate = useNavigate();
+
+  const accessToken = localStorage.getItem("accessToken");
+
+  const [loading, setLoading] = useState(false);
+
   const [data, setData] = useState({
     fullname:"",
     jobtitle:"",
@@ -18,8 +26,47 @@ function JRProfilePage() {
     aboutcompany:"",
   });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try{
+      const res = await axios.post(
+        `${JOBGIVER_API_ENDPOINT}/profilemanage`,
+        data,{
+          headers:{
+            Authorization: `Bearer ${accessToken}`,
+          },
+          withCredentials:true,
+        }
+      );
+      console.log(res.data);
+      toast.success(res.data.message);
+      navigate("/jobrecruiter/profile/submit");
+    }catch(error){
+      toast.error(error.message);
+    }finally{
+      setLoading(false);
+    }
+  }
+
   return (
     <div className='bg-[#F6F9FE]'>
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+            src={NextStep}
+            alt="Loading"
+            className="w-20 mb-6"
+          />
+          {/* Spinner */}
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+            <p className="mt-4 text-blue-600 font-bold text-m">
+              Saving your profile...
+            </p>
+          </div>
+      )}
       <Header/>
       <div className="relative min-h-screen overflow-hidden">
         <img src={Square} alt="square" className=" absolute pt-10  -ml-50 md:-ml-120"/>
@@ -198,8 +245,8 @@ function JRProfilePage() {
 
       <div className="flex justify-center mt-10 mb-10">
         <button 
-        className="bg-[#0F2B46] text-white px-10 py-3 rounded-md font-medium hover:opacity-90 transition"
-        onClick={()=>navigate("/jobrecruiter/submitpage")}>
+        className="bg-[#0F2B46] text-white px-10 py-3 rounded-md font-medium hover:bg-white hover:text-blue-950 cursor-pointer transition"
+        onClick={handleSubmit}>
           Submit Application
         </button>
       </div>

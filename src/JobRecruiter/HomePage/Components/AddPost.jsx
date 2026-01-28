@@ -15,7 +15,7 @@ function AddPost() {
       <div className="flex gap-2 items-center px-5 pt-2">
         <img src={User} alt="profile" className="h-5 md:h-full" />
         <button 
-          className="border cursor-pointer text-white text-2xl bg-blue-950 hover:bg-white hover:text-blue-950 border-black rounded-md  md:py-5 md:px-30"
+          className="border cursor-pointer text-white text-2xl bg-blue-950 hover:bg-white hover:text-blue-950 border-black rounded-md px-2 md:py-5 md:px-30"
           onClick={PostJobForm}>
           Post Job
         </button>
