@@ -23,8 +23,8 @@ import JRSubmitPage from "./JobRecruiter/SubmitPage/JRSubmitPage"
 import VerifyPage2 from "./Authorisation/Pages/VerifyPage2"
 import ProtectedRoutes from "./ProtectedRoutes"
 import JobPostForm from "./JobRecruiter/HomePage/Pages/JobPostForm"
-import Setting from "./Setting"
-import SettingJR from "./JobRecruiter/settingJR"
+import Setting from "./Setting";
+import SettingJR from "./JobRecruiter/SettingJR";
 
 
 function App() {
