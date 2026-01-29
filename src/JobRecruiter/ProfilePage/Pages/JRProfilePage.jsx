@@ -8,9 +8,12 @@ import { useState } from "react";
 import { JOBGIVER_API_ENDPOINT } from "../../../APIs/Data";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { setId, setJobTitle, setAboutCompany, setCompanyName, setContactEmail, setDescription, setFullName, setLocation, setSpecialization, setUserId } from "../../../Redux/jobGiverSlice";
+import { useDispatch } from "react-redux";
 
 function JRProfilePage() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const accessToken = localStorage.getItem("accessToken");
 
@@ -42,6 +45,20 @@ function JRProfilePage() {
         }
       );
       console.log(res.data);
+
+      const response = res.data.company;
+      
+      dispatch(setAboutCompany(response.aboutcompany));
+      dispatch(setCompanyName(response.companyName));
+      dispatch(setContactEmail(response.contactEmail));
+      dispatch(setDescription(response.description));
+      dispatch(setFullName(response.fullname));
+      dispatch(setId(response._id));
+      dispatch(setLocation(response.location));
+      dispatch(setSpecialization(response.specialization));
+      dispatch(setJobTitle(response.jobtitle));
+      dispatch(setUserId(response.userId));
+
       toast.success(res.data.message);
       navigate("/jobrecruiter/profile/submit");
     }catch(error){

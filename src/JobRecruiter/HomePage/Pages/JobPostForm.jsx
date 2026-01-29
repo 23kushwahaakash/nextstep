@@ -3,13 +3,10 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { JOB_API_ENDPOINT } from "../../../APIs/Data";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {setJobCategory,setJobGiverId,setCompanyName,setJobId,setJobDescription,setJobExperience,setJobExperienceLevel,setJobLocation,setJobSkills,setJobTags,setJobTime,setJobTitle,setSalaryMaximum,setSalaryMinimum} from "../../../Redux/jobSlice";
 
 function JobPostForm() {
     const accessToken = localStorage.getItem("accessToken");
-    const dispatch = useDispatch();
     const navigate = useNavigate();
     const [jobData, setJobData] = useState({
         title:"",
@@ -41,24 +38,6 @@ function JobPostForm() {
                 }
             );
             console.log(res.data);
-
-            const response = res.data.job;
-
-            dispatch(setCompanyName(response.companyName));
-            dispatch(setJobCategory(response.category));
-            dispatch(setJobDescription(response.description));
-            dispatch(setJobExperience(response.experience));
-            dispatch(setJobExperienceLevel(response.experienceLevel));
-            dispatch(setJobGiverId(response.jobGiverId));
-            dispatch(setJobId(response._id));
-            dispatch(setJobLocation(response.location));
-            dispatch(setJobSkills(response.skillsRequired));
-            dispatch(setJobTags(response.tags));
-            dispatch(setJobTime(response.jobType));
-            dispatch(setJobTitle(response.title));
-            dispatch(setSalaryMaximum(response.salary.max));
-            dispatch(setSalaryMinimum(response.salary.min));
-
             toast.success(res.message);
             navigate("/jobrecruiter/home")
         }catch(error){
