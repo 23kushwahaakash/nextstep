@@ -4,11 +4,13 @@ import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector} from "react-redux";
 import toast from "react-hot-toast";
-import {clearAuth} from "../../../Redux/authSlice"
-import {AUTH_API_ENDPOINT} from "../../../APIs/Data"
+import {clearAuth} from "../../../Redux/authSlice";
+import {AUTH_API_ENDPOINT} from "../../../APIs/Data";
+import NextStep from "../../../Authorisation/Images/logo.png";
 
 function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,6 +27,7 @@ function Hamburger() {
   const userPass = useSelector(state => state.auth.userPass);
 
   const handleLogOut = async () => {
+    setLoading(true);
     try{
       await axios.post(`${AUTH_API_ENDPOINT}/logout`,
         {
@@ -44,11 +47,28 @@ function Hamburger() {
     }
     catch{
       toast.error("Error!")
+    }finally{
+      setLoading(false);
     }
   };
 
   return (
     <>
+    {loading && (
+        <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+          src={NextStep}
+          alt="Loading"
+          className="w-20 mb-6"
+          />
+          {/* Spinner */}
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+          <p className="mt-4 text-blue-600 font-bold text-m">
+            Logging you out...
+          </p>
+        </div>
+      )}
       <button 
         onClick={toggleMenu}
         className="md:hidden flex flex-col gap-1.5 p-2"

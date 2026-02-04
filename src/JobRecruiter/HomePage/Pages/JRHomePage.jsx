@@ -15,8 +15,8 @@ const JRHomePage = () => {
     <div className='bg-[#F1F5FA] min-h-screen'>
       <Header/>
       <div className='bg-white w-full md:w-[95%] shadow-lg pt-[20%] md:pt-[6%] mx-auto flex flex-col items-center overflow-x-hidden'>
-          <AddPost />
-          <Companies/>
+        <AddPost />
+        <Companies/>
         
           <div className="bg-white w-full">
             <div className="p-4 md:p-10 max-w-7xl mx-auto">

@@ -107,7 +107,7 @@ function ProfilePopUp({ onClose }) {
           <span>Messages</span>
         </button>
 
-        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("")}>
+        <button className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-3 text-gray-700 transition-colors" onClick={()=>navigate("/jobseeker/settings")}>
           <Settings className="w-5 h-5" />
           <span>Settings</span>
         </button>

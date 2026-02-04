@@ -11,7 +11,11 @@ import Header from '../../LandingPage/Components/Header'
 import Footer from '../../LandingPage/Components/Footer'
 import Jobcards from "../Components/Jobcards"
 import { Search } from "lucide-react"
-import {useState} from 'react'
+import {useState, useEffect} from 'react';
+import axios from "axios";
+import toast from "react-hot-toast";
+import NextStep from "../../Authorisation/Images/logo.png";
+import { APPLICATION_API_ENDPPOINT } from "../../APIs/Data";
 import I1 from "../Images/I1.png"
 import I2 from "../Images/I2.png"
 import I3 from "../Images/I3.png"
@@ -25,9 +29,52 @@ import I8 from "../Images/I8.jpg"
 function JobPage() {
 
     const [value, setValue]=useState(50);
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState([]);
+    const accessToken = localStorage.getItem("accessToken");
+
+    const getJobData = async (e) => {
+        setLoading(true);
+        try{
+            const res = await axios.get(`${APPLICATION_API_ENDPPOINT}/getallapplicant/6917f642beed0bdf194c7634`,
+                {
+                    headers:{
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                    withCredentials: true,
+                }
+            );
+            console.log(res.data);
+            setData(res.data);
+            toast.success(res.data.message);
+        }catch(error){
+            toast.error(error.message);
+        }finally{
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getJobData();
+    },[]);
 
   return (
     <div>
+        {loading && (
+        <div className="fixed inset-0 z-50 bg-white/80 flex flex-col items-center justify-center">
+          {/* Logo */}
+          <img
+          src={NextStep}
+          alt="Loading"
+          className="w-20 mb-6"
+          />
+          {/* Spinner */}
+          <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
+          <p className="mt-4 text-blue-600 font-bold text-m">
+            Fetching jobs...
+          </p>
+        </div>
+      )}
         <Header/>
         <div className=" pt-10 md:pt-6 z-0">
             <img src={Map} alt="map" className="relative md:min-h-screen "/>

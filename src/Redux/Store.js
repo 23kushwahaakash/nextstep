@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./authSlice";
 import profileReducer from "./profileSlice";
+import jobGiverReducer from "./jobGiverSlice";
 
 const store=configureStore({
     reducer:{
         auth: authReducer,
-        profile: profileReducer
+        jobSeeker: profileReducer,
+        jobGiver: jobGiverReducer,
     }
 })
 

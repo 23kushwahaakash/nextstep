@@ -22,6 +22,9 @@ import JRProfilePage from "./JobRecruiter/ProfilePage/Pages/JRProfilePage"
 import JRSubmitPage from "./JobRecruiter/SubmitPage/JRSubmitPage"
 import VerifyPage2 from "./Authorisation/Pages/VerifyPage2"
 import ProtectedRoutes from "./ProtectedRoutes"
+import JobPostForm from "./JobRecruiter/HomePage/Pages/JobPostForm"
+import Setting from "./Setting";
+import SettingJR from "./JobRecruiter/SettingJR";
 
 
 function App() {
@@ -49,11 +52,14 @@ function App() {
           <Route path="/jobseeker/profile" element={<ProfilePage/>}></Route>
           <Route path="/jobseeker/profile/submit" element={<SubmitPage/>}></Route>
           <Route path="/jobseeker/dashboard" element={<DashboardPage/>}></Route>
+          <Route path="/jobseeker/settings" element={<Setting/>}></Route>
           <Route path="/jobrecruiter" element={<LandingPage/>}></Route>
           <Route path="/jobrecruiter/dashboard" element={<JRDashboardPage/>}></Route>
           <Route path="/jobrecruiter/home" element={<JRHomePage/>}></Route>
           <Route path="/jobrecruiter/profile" element={<JRProfilePage/>}></Route>
           <Route path="/jobrecruiter/profile/submit" element={<JRSubmitPage/>}></Route>
+          <Route path="jobrecruiter/settings" element={<SettingJR/>}></Route>
+          <Route path="/postjob" element={<JobPostForm/>}></Route>
         </Route>
       </Routes>
     </div>

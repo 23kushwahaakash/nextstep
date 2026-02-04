@@ -33,7 +33,7 @@ const HowItWorksSection = () => {
           </div>
         ))}
       </div>
-<Link to="/jobrecruiter/HomePage">
+<Link to="/jobrecruiter/home">
       <button className="mt-12 bg-gray-900 text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-gray-700 shadow-lg">
         Post A Job Now
       </button>
